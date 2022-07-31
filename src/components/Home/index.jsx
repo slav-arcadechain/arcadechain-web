@@ -4,25 +4,20 @@ const HomeComp = () => {
     return (
         <>
             <div className="text-center">
-                <center>
+                <div className={"content-center"}>
                     <video id={'introVideo'} className={"content-center"} src='/videos/intro_small.mp4' autoPlay={true} width={1442} muted={true} controls={true} />
-                </center>
+                </div>
             </div>
             <div className="text-center pt-20" id={'header-text'}>
-                <h1 className="text-[28px] font-bold tracking-tight text-white md:text-6xl lg:hidden">
+                <h1 className="font-bold tracking-tight text-white text-8xl ">
                     <span
-                        className="text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Arcade and e-sport hub</span>
-                </h1>
-
-                <h1 className="hidden font-bold tracking-tight text-white text-8xl lg:block">
-                    <span
-                        className="block text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Arcade and e-sport hub</span>
+                        className="block text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Arcade-style crypto games</span>
                 </h1>
 
                 <div className="flex justify-center max-w-md mx-auto mt-8 gap-x-6 md:mt-14 md:gap-x-10">
                     <button
                         className="relative h-10 w-32 font-poppins text-sm font-bold text-white md:h-[54px] md:w-[180px] md:text-base">
-                        <a href='#roadmap'>
+                        <a href='#roadmap' title={"roadmap"}>
                             <span className="relative z-20">Learn More</span>
                         </a>
                         <img className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="" />
@@ -33,7 +28,7 @@ const HomeComp = () => {
 
             <div className="pb-10 mt-34 md:mt-51 md:pb-18 ">
                 <h2 className="text-xl font-bold text-center md:hidden">About us</h2>
-                <h2 className="hidden font-bold text-center md:block md:text-5xl text-white">About ArcadeChain</h2>
+                <h2 className="hidden font-bold text-center md:block md:text-5xl text-white">About Arcade Chain</h2>
 
                 <div className="grid mt-18 gap-x-10 gap-y-4 md:grid-cols-2 md:gap-y-18 lg:grid-cols-3">
                     <div
@@ -110,10 +105,10 @@ const HomeComp = () => {
             <div
                 className="flex flex-col items-center gap-8 p-4 mt-16 rounded-2xl bg-slate-800/40 md:p-10 lg:flex-row lg:gap-14 xl:gap-55 xl:py-26 xl:px-38">
                 <div>
-                    <h2 className="text-xl font-bold md:text-6xl text-white">Token pre-sales</h2>
+                    <h2 className="text-xl font-bold md:text-6xl text-white">Initial coin offering and token pre-sale</h2>
 
                     <p className="mt-2 text-left text-gray-400 md:mt-10 xl:text-2xl">
-                        Our goal is to have a pre-sales event in the quarter four of 2022 followed by public sale and CEX listing in early 2023. <br />
+                        Our goal is to have the initial coin offering in the quarter four of 2022 followed by public sale and CEX listing in early 2023. <br />
                         The pre-sale will be open to everyone willing to participate with a cap of $5000 per person. Token price will be set to $0.01 per ACT. <br />
                         The pre-sale is capped at 5% of total supply (please see tokenomics below).
                     </p>

@@ -2,7 +2,13 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.arcadechain.io/</loc>
-        <lastmod>2022-07-27</lastmod>
+        <lastmod>2022-07-31</lastmod>
+        <priority>1.0</priority>
+        <changefreq>Daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.arcadechain.io/robots.txt</loc>
+        <lastmod>2022-07-31</lastmod>
         <priority>1.0</priority>
         <changefreq>Daily</changefreq>
     </url>

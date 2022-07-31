@@ -10,10 +10,11 @@ const Home = () => {
     <>
       <div className="relative overflow-hidden">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
-          <meta name="description" content="ArcadeChain is crypto game and e-sport hub where users can play classic and new exiting games using a stable coin. ACT token is used to participate in profits from the platform. Crypto token pre-sale" />
-          <meta name="keywords" content="ArcadeChain, Arcade, Crypto Game, ICO, Crypto Token, Crypto Games, Passive Income, Blockchain Games, token pre-sale, pre-sale, stable coin" />
-          <title>ArcadeChain</title>
+          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+          <meta name="description" content="Arcade Chain is crypto game platform where users can play classic and new exiting arcade games using a stable coin. Crypto initial token offering - pre-sale" />
+          <meta name="keywords" content="ArcadeChain, Arcade Chain, Arcade, Crypto Game, ICO, initial coin offering, Crypto Token, Crypto Games, Passive Income, Blockchain Games, token pre-sale, pre-sale, stable coin" />
+          <title>Arcade Chain - Crypto games - initial coin offering - token pre-sale</title>
         </Head>
         <Background />
         <Header />
