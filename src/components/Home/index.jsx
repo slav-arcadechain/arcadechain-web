@@ -105,7 +105,7 @@ const HomeComp = () => {
             <div
                 className="flex flex-col items-center gap-8 p-4 mt-16 rounded-2xl bg-slate-800/40 md:p-10 lg:flex-row lg:gap-14 xl:gap-55 xl:py-26 xl:px-38">
                 <div>
-                    <h2 className="text-xl font-bold md:text-6xl text-white">Initial coin offering and token pre-sale</h2>
+                    <h2 className="text-xl font-bold md:text-4xl text-white">Initial coin offering and token pre-sale</h2>
 
                     <p className="mt-2 text-left text-gray-400 md:mt-10 xl:text-2xl">
                         Our goal is to have the initial coin offering in the quarter four of 2022 followed by public sale and CEX listing in early 2023. <br />
