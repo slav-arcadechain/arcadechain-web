@@ -9,9 +9,9 @@ const HomeComp = () => {
                 </div>
             </div>
             <div className="text-center pt-20" id={'header-text'}>
-                <h1 className="font-bold tracking-tight text-white text-8xl ">
+                <h1 className="font-bold tracking-tight text-white text-7xl">
                     <span
-                        className="block text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Arcade-style crypto games</span>
+                        className="block text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Crypto games, initial coin offering and pre-sale</span>
                 </h1>
 
                 <div className="flex justify-center max-w-md mx-auto mt-8 gap-x-6 md:mt-14 md:gap-x-10">
@@ -38,7 +38,7 @@ const HomeComp = () => {
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Entertaining</p>
                         <p className="text-base text-gray-400 xl:text-xl">
-                            From arcade classics through betting games to modern PvP games. Tones of entertainment for everybody.
+                            From arcade style classics through betting games to modern PvP games. Tones of entertainment for everybody.
                         </p>
                     </div>
 
