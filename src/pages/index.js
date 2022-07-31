@@ -24,7 +24,7 @@ const Home = () => {
                           content={"Arcade Chain is crypto game platform where users can play classic and new exiting arcade games using a stable coin. Crypto initial token offering - pre-sale"}/>
                     <meta property={"og:url"} content={"https://www.arcadechain.io"}/>
                     <meta property={"og:site_name"} content={"Arcade Chain"}/>
-                    <meta property={"og:image"} content={"https://www.arcadechain.io/arcade_chain_og.jpg"}/>
+                    <meta property={"og:image"} content={"https://arcadechain-images.s3.amazonaws.com/arcade_chain_og.jpg"}/>
                     <meta property={"og:video"} content={"https://www.arcadechain.io/videos/intro_small.mp4"}/>
                     <meta property={"twitter:card"} content={"summary"}/>
                     <meta name="twitter:site" content="https://www.arcadechain.io"/>
