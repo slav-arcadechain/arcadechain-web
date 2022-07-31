@@ -1,19 +1,47 @@
 {
-  "name": "next-netlify-starter",
-  "version": "0.5.0",
+  "license": "UNLICENSED",
+  "name": "",
+  "version": "0.1.0",
   "private": true,
+  "dependencies": {
+    "@web3-react/core": "^6.1.9",
+    "@web3-react/injected-connector": "^6.0.7",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "web3": "^1.6.1"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next export"
+    "build": "npm run watch:css && next build",
+    "start": "npm run watch:css && next start",
+    "watch:css": "npx tailwindcss --postcss -i src/tailwind.css -o src/style.css --watch"
   },
-  "dependencies": {
-    "cypress": "^10.0.3",
-    "next": "^12.1.5",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "resolutions": {
+    "sha3": "2.0.2"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^4.13.1"
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "autoprefixer": "^9.6.1",
+    "postcss": "^8.4.14",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.11",
+    "tailwindcss": "^3.1.2",
+    "terser": "^5.14.2"
   }
 }
