@@ -30,7 +30,6 @@ const HomeComp = () => {
             <div className="pb-10 mt-34 md:mt-51 md:pb-18 ">
                 <h2 className="text-xl font-bold text-center md:hidden text-white">About us</h2>
                 <h2 className="hidden font-bold text-center md:block md:text-5xl text-white">About Arcade Chain</h2>
-
                 <div className="grid mt-18 gap-x-10 gap-y-4 md:grid-cols-2 md:gap-y-18 lg:grid-cols-3">
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
