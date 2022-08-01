@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Link from 'next/link'
+import Image from "next/image";
 
 class Header extends Component {
 
@@ -9,12 +10,13 @@ class Header extends Component {
                 <header id="top" className="px-4 mx-auto max-w-container sm:px-10 3xl:px-0">
                     <div className="flex h-19 items-center justify-between px-2 md:h-22.5 md:px-0">
                         <div className="flex items-center gap-10 md:w-full md:justify-between">
-                            <Link className={"relative flex items-center z-100 gap-x-4 whitespace-nowrap"} href={"/"}>
-                                <picture>
-                                    <img className="pt-10" src={"/images/arcade_chain.svg"} width="256" height="256" alt="arcade chain" />
-                                </picture>
-                            </Link>
 
+                            <Link href='/'>
+                                <a
+                                    className="relative z-50 pt-10 flex flex-col items-center gap-2 whitespace-nowrap sm:flex-row md:gap-4" title={"Arcade Chain"}>
+                                    <Image className="" src={"/images/arcade_chain.svg"} width="256" height="256" alt="arcade chain" />
+                                </a>
+                            </Link>
                             <nav id="primary-nav"
                                 className="fixed inset-0 flex flex-col items-center text-xl duration-200 ease-in-out translate-x-full z-90 gap-7 bg-slate-900/80 pt-28 backdrop-blur md:left-1/2 xl:static xl:translate-x-0 xl:flex-row xl:items-center xl:gap-6 xl:bg-transparent xl:px-0 xl:pt-0 xl:text-base">
                             </nav>
