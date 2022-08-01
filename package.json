@@ -12,13 +12,11 @@
     "web3": "^1.6.1"
   },
   "scripts": {
+    "lint": "next lint",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "watch:css": "npx tailwindcss --postcss -i src/tailwind.css -o src/style.css --watch"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

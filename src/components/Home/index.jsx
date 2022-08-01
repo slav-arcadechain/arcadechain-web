@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { component } from "react";
 
 const HomeComp = () => {
@@ -9,7 +10,7 @@ const HomeComp = () => {
                 </div>
             </div>
             <div className="text-center pt-20" id={'header-text'}>
-                <h1 className="font-bold tracking-tight text-white text-7xl">
+                <h1 className="font-bold tracking-tight text-white text-3xl md:text-5xl lg:text-7xl">
                     <span
                         className="block text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Crypto games, initial coin offering and pre-sale</span>
                 </h1>
@@ -20,22 +21,23 @@ const HomeComp = () => {
                         <a href='#roadmap' title={"roadmap"}>
                             <span className="relative z-20">Learn More</span>
                         </a>
-                        <img className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="" />
+                        <Image layout="fill" className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="" />
 
                     </button>
                 </div>
             </div>
 
             <div className="pb-10 mt-34 md:mt-51 md:pb-18 ">
-                <h2 className="text-xl font-bold text-center md:hidden">About us</h2>
+                <h2 className="text-xl font-bold text-center md:hidden text-white">About us</h2>
                 <h2 className="hidden font-bold text-center md:block md:text-5xl text-white">About Arcade Chain</h2>
 
                 <div className="grid mt-18 gap-x-10 gap-y-4 md:grid-cols-2 md:gap-y-18 lg:grid-cols-3">
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
-                        <img className="h-11 w-11 xl:h-20 xl:w-20" src={"/images/002_joystick.svg"}
-                            alt="" />
-
+                        <div className="relative h-11 w-11 xl:h-20 xl:w-20">
+                            <Image layout="fill" src={"/images/002_joystick.svg"}
+                                alt="" />
+                        </div>
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Entertaining</p>
                         <p className="text-base text-gray-400 xl:text-xl">
                             From arcade style classics through betting games to modern PvP games. Tones of entertainment for everybody.
@@ -44,8 +46,10 @@ const HomeComp = () => {
 
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
-                        <img className="h-11 w-11 xl:h-20 xl:w-20" src={"/images/005_wallet.svg"}
-                            alt="" />
+                        <div className="relative h-11 w-11 xl:h-20 xl:w-20">
+                            <Image layout="fill" src={"/images/005_wallet.svg"}
+                                alt="" />
+                        </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Passive income</p>
                         <p className="text-base text-gray-400 xl:text-xl">
@@ -57,7 +61,9 @@ const HomeComp = () => {
 
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
-                        <img className="h-11 w-11 xl:h-20 xl:w-20" src={"/images/007_point.svg"} alt="" />
+                        <div className="relative h-11 w-11 xl:h-20 xl:w-20">
+                            <Image layout="fill" src={"/images/007_point.svg"} alt="" />
+                        </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Play-to-Earn</p>
                         <p className="text-base text-gray-400 xl:text-xl">
@@ -69,8 +75,10 @@ const HomeComp = () => {
 
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
-                        <img className="h-11 w-11 xl:h-20 xl:w-20" src={"/images/004_dollar.svg"}
-                            alt="" />
+                        <div className="relative h-11 w-11 xl:h-20 xl:w-20">
+                            <Image layout="fill" src={"/images/004_dollar.svg"}
+                                alt="" />
+                        </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Stable coin</p>
                         <p className="text-base text-gray-400 xl:text-xl">
@@ -79,8 +87,10 @@ const HomeComp = () => {
                     </div>
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
-                        <img className="h-11 w-11 xl:h-20 xl:w-20" src={"/images/003_happy.svg"}
-                            alt="" />
+                        <div className="relative h-11 w-11 xl:h-20 xl:w-20">
+                            <Image layout="fill" src={"/images/003_happy.svg"}
+                                alt="" />
+                        </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Community driven</p>
                         <p className="text-base text-gray-400 xl:text-xl">
@@ -91,8 +101,10 @@ const HomeComp = () => {
 
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
-                        <img className="h-11 w-11 xl:h-20 xl:w-20" src={"/images/001_blockchain.svg"}
-                            alt="" />
+                        <div className="relative h-11 w-11 xl:h-20 xl:w-20">
+                            <Image layout="fill" src={"/images/001_blockchain.svg"}
+                                alt="" />
+                        </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Multi and Cross-chain</p>
                         <p className="text-base text-gray-400 xl:text-xl">
@@ -115,7 +127,8 @@ const HomeComp = () => {
 
                 </div>
 
-                <img src={"/images/arcade-machine.png"} alt="arcade machine"
+                <Image
+                    src={"/images/arcade-machine.png"} alt="arcade machine"
                     srcSet="images/arcade-machine@2x 2x.png"
                     width="257" height="404" />
             </div>
@@ -123,12 +136,16 @@ const HomeComp = () => {
             <div className="relative fullbleed">
                 <div id='roadmap' className="px-4 pb-8 mx-auto mt-10 space-y-6 max-w-container sm:px-10 md:mt-26 md:space-y-30 3xl:px-0">
                     <h2 className="text-xl font-bold text-center md:text-5xl text-white">Roadmap</h2>
-                    <picture className="block">
-                        <img src={"/images/roadmap.svg"} alt="" />
-                    </picture>
+                    <div className="w-full aspect-square relative">
+                        <Image layout="fill" src={"/images/roadmap.svg"} alt="" />
+                    </div>
                 </div>
-                <img className="absolute inset-x-0 top-0 w-full -z-10 lg:bottom-0"
-                    src={"/images/3d-space-scene.webp"} alt="" />
+                <div className="absolute inset-x-0 top-0 w-full -z-10 lg:bottom-0">
+                    <Image
+                        layout="fill"
+                        objectFit="contain"
+                        src={"/images/3d-space-scene.webp"} alt="" />
+                </div>
             </div>
 
             <div id="tokenomics" className="mt-10 sm:pb-22 md:mt-61">
@@ -138,17 +155,29 @@ const HomeComp = () => {
                     className="mt-6 lg:mt-14 lg:flex lg:items-center lg:justify-between lg:gap-x-18 xl:items-end xl:gap-x-24">
                     <div
                         className="mx-auto grid w-full max-w-[471px] pb-10 lg:mx-0 xl:max-w-[541px] 2xl:max-w-[701px] 3xl:max-w-[741px]">
-                        <img className="col-span-full row-span-full"
-                            src={"/images/round-chart-2.webp"} alt="" />
+                        <div className="relative col-span-full row-span-full aspect-square">
+                            <Image
+                                layout="fill"
+                                objectFit="contain"
+                                src={"/images/round-chart-2.webp"} alt="" />
+                        </div>
                     </div>
-
+                    {/* 175 * 98 */}
                     <div className="mx-auto text-white space-y-10 md:mx-0 md:flex-1 lg:pr-10">
                         <div
                             className="relative mx-auto flex h-[95px] w-11/12 max-w-[595px] flex-col items-center justify-center gap-y-1 bg-gray-900 sm:w-10/12 sm:flex-row sm:justify-between md:w-full lg:flex-col lg:justify-center xl:flex-row xl:justify-between">
-                            <img className="absolute -top-px -left-5 sm:left-[-52px]"
-                                src={"/images/bar-edge-left.svg"} alt="" />
-                            <img className="absolute -top-px -right-5 sm:right-[-52px]"
-                                src={"/images/bar-edge-right.svg"} alt="" />
+
+                            <div className="-top-px absolute -left-5 sm:left-[-52px]">
+                                <div className="relative w-[175px] h-[98px]">
+                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="" />
+                                </div>
+                            </div>
+                            <div className="absolute -top-px -right-5 sm:right-[-52px]">
+                                <div className="relative w-[88px] h-[98px]">
+                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="" />
+                                </div>
+                            </div>
+
 
                             <div className="relative z-20">
                                 <p className="flex items-baseline justify-center gap-x-3 sm:justify-start lg:justify-center xl:justify-start">
@@ -170,10 +199,18 @@ const HomeComp = () => {
 
                         <div
                             className="relative mx-auto flex h-[95px] w-11/12 max-w-[595px] flex-col items-center justify-center gap-y-1 bg-gray-900 sm:w-10/12 sm:flex-row sm:justify-between md:w-full lg:flex-col lg:justify-center xl:flex-row xl:justify-between">
-                            <img className="absolute -top-px -left-5 sm:left-[-52px]"
-                                src={"/images/bar-edge-left.svg"} alt="" />
-                            <img className="absolute -top-px -right-5 sm:right-[-52px]"
-                                src={"/images/bar-edge-right.svg"} alt="" />
+
+                            <div className="-top-px absolute -left-5 sm:left-[-52px]">
+                                <div className="relative w-[175px] h-[98px]">
+                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="" />
+                                </div>
+                            </div>
+
+                            <div className="absolute -top-px -right-5 sm:right-[-52px]">
+                                <div className="relative w-[88px] h-[98px]">
+                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="" />
+                                </div>
+                            </div>
 
                             <div className="relative z-20">
                                 <p className="flex items-baseline justify-center gap-x-3 sm:justify-start lg:justify-center xl:justify-start">
@@ -195,10 +232,17 @@ const HomeComp = () => {
 
                         <div
                             className="relative mx-auto flex h-[95px] w-11/12 max-w-[595px] flex-col items-center justify-center gap-y-1 bg-gray-900 sm:w-10/12 sm:flex-row sm:justify-between md:w-full lg:flex-col lg:justify-center xl:flex-row xl:justify-between">
-                            <img className="absolute -top-px -left-5 sm:left-[-52px]"
-                                src={"/images/bar-edge-left.svg"} alt="" />
-                            <img className="absolute -top-px -right-5 sm:right-[-52px]"
-                                src={"/images/bar-edge-right.svg"} alt="" />
+
+                            <div className="-top-px absolute -left-5 sm:left-[-52px]">
+                                <div className="relative w-[175px] h-[98px]">
+                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="" />
+                                </div>
+                            </div>
+                            <div className="absolute -top-px -right-5 sm:right-[-52px]">
+                                <div className="relative w-[88px] h-[98px]">
+                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="" />
+                                </div>
+                            </div>
 
                             <div className="relative z-20">
                                 <p className="flex items-baseline justify-center gap-x-3 sm:justify-start lg:justify-center xl:justify-start">
@@ -220,11 +264,17 @@ const HomeComp = () => {
 
                         <div
                             className="relative mx-auto flex h-[95px] w-11/12 max-w-[595px] flex-col items-center justify-center gap-y-1 bg-gray-900 sm:w-10/12 sm:flex-row sm:justify-between md:w-full lg:flex-col lg:justify-center xl:flex-row xl:justify-between">
-                            <img className="absolute -top-px -left-5 sm:left-[-52px]"
-                                src={"/images/bar-edge-left.svg"} alt="" />
-                            <img className="absolute -top-px -right-5 sm:right-[-52px]"
-                                src={"/images/bar-edge-right.svg"} alt="" />
 
+                            <div className="-top-px absolute -left-5 sm:left-[-52px]">
+                                <div className="relative w-[175px] h-[98px]">
+                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="" />
+                                </div>
+                            </div>
+                            <div className="absolute -top-px -right-5 sm:right-[-52px]">
+                                <div className="relative w-[88px] h-[98px]">
+                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="" />
+                                </div>
+                            </div>
                             <div className="relative z-20">
                                 <p className="flex items-baseline justify-center gap-x-3 sm:justify-start lg:justify-center xl:justify-start">
                                     <span
@@ -245,11 +295,17 @@ const HomeComp = () => {
 
                         <div
                             className="relative mx-auto flex h-[95px] w-11/12 max-w-[595px] flex-col items-center justify-center gap-y-1 bg-gray-900 sm:w-10/12 sm:flex-row sm:justify-between md:w-full lg:flex-col lg:justify-center xl:flex-row xl:justify-between">
-                            <img className="absolute -top-px -left-5 sm:left-[-52px]"
-                                src={"/images/bar-edge-left.svg"} alt="" />
-                            <img className="absolute -top-px -right-5 sm:right-[-52px]"
-                                src={"/images/bar-edge-right.svg"} alt="" />
 
+                            <div className="-top-px absolute -left-5 sm:left-[-52px]">
+                                <div className="relative w-[175px] h-[98px]">
+                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="" />
+                                </div>
+                            </div>
+                            <div className="absolute -top-px -right-5 sm:right-[-52px]">
+                                <div className="relative w-[88px] h-[98px]">
+                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="" />
+                                </div>
+                            </div>
                             <div className="relative z-20">
                                 <p className="flex items-baseline justify-center gap-x-3 sm:justify-start lg:justify-center xl:justify-start">
                                     <span
@@ -270,11 +326,17 @@ const HomeComp = () => {
 
                         <div
                             className="relative mx-auto flex h-[95px] w-11/12 max-w-[595px] flex-col items-center justify-center gap-y-1 bg-gray-900 sm:w-10/12 sm:flex-row sm:justify-between md:w-full lg:flex-col lg:justify-center xl:flex-row xl:justify-between">
-                            <img className="absolute -top-px -left-5 sm:left-[-52px]"
-                                src={"/images/bar-edge-left.svg"} alt="" />
-                            <img className="absolute -top-px -right-5 sm:right-[-52px]"
-                                src={"/images/bar-edge-right.svg"} alt="" />
 
+                            <div className="-top-px absolute -left-5 sm:left-[-52px]">
+                                <div className="relative w-[175px] h-[98px]">
+                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="" />
+                                </div>
+                            </div>
+                            <div className="absolute -top-px -right-5 sm:right-[-52px]">
+                                <div className="relative w-[88px] h-[98px]">
+                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="" />
+                                </div>
+                            </div>
                             <div className="relative z-20">
                                 <p className="flex items-baseline justify-center gap-x-3 sm:justify-start lg:justify-center xl:justify-start">
                                     <span
