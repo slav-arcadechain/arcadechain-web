@@ -1,51 +1,62 @@
 import React, { component } from "react";
+import Image from "next/image";
 
 const HomeComp = () => {
     return (
         <>
             <div className="text-center">
-                <div className={"content-center"}>
-                    <video id={'introVideo'} className={"content-center"} src='/videos/intro_small.mp4' autoPlay={true} width={1442} muted={true} controls={true} />
-                </div>
+                <center>
+                    <video id={'introVideo'} className={"content-center"} src='/videos/intro_small.mp4' autoPlay width={1442} muted={true} controls={true} />
+                </center>
             </div>
             <div className="text-center pt-20" id={'header-text'}>
-                <h1 className="font-bold tracking-tight text-white text-7xl">
+                <h1 className="text-[28px] font-bold tracking-tight text-white md:text-6xl lg:hidden">
                     <span
-                        className="block text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Crypto games, initial coin offering and pre-sale</span>
+                        className="text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Arcade and e-sport hub</span>
+                </h1>
+
+                <h1 className="hidden font-bold tracking-tight text-white text-8xl lg:block">
+                    <span
+                        className="block text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Arcade and e-sport hub</span>
                 </h1>
 
                 <div className="flex justify-center max-w-md mx-auto mt-8 gap-x-6 md:mt-14 md:gap-x-10">
                     <button
                         className="relative h-10 w-32 font-poppins text-sm font-bold text-white md:h-[54px] md:w-[180px] md:text-base">
-                        <a href='#roadmap' title={"roadmap"}>
+                        <a href='#roadmap'>
                             <span className="relative z-20">Learn More</span>
                         </a>
-                        <img className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="" />
-
+                        <Image layout='fill' alt="" className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} />
                     </button>
                 </div>
             </div>
 
             <div className="pb-10 mt-34 md:mt-51 md:pb-18 ">
                 <h2 className="text-xl font-bold text-center md:hidden">About us</h2>
-                <h2 className="hidden font-bold text-center md:block md:text-5xl text-white">About Arcade Chain</h2>
+                <h2 className="hidden font-bold text-center md:block md:text-5xl text-white">About ArcadeChain</h2>
 
                 <div className="grid mt-18 gap-x-10 gap-y-4 md:grid-cols-2 md:gap-y-18 lg:grid-cols-3">
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
-                        <img className="h-11 w-11 xl:h-20 xl:w-20" src={"/images/002_joystick.svg"}
-                            alt="" />
+
+                        <div className="h-11 w-11 xl:h-20 xl:w-20 relative">
+                            <Image layout='fill' src={"/images/002_joystick.svg"}
+                                alt="" />
+                        </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Entertaining</p>
                         <p className="text-base text-gray-400 xl:text-xl">
-                            From arcade style classics through betting games to modern PvP games. Tones of entertainment for everybody.
+                            From arcade classics through betting games to modern PvP games. Tones of entertainment for everybody.
                         </p>
                     </div>
 
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
-                        <img className="h-11 w-11 xl:h-20 xl:w-20" src={"/images/005_wallet.svg"}
-                            alt="" />
+
+                        <div className="h-11 w-11 xl:h-20 xl:w-20 relative">
+                            <Image layout='fill' src={"/images/005_wallet.svg"}
+                                alt="" />
+                        </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Passive income</p>
                         <p className="text-base text-gray-400 xl:text-xl">
@@ -57,8 +68,9 @@ const HomeComp = () => {
 
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
-                        <img className="h-11 w-11 xl:h-20 xl:w-20" src={"/images/007_point.svg"} alt="" />
-
+                        <div className="h-11 w-11 xl:h-20 xl:w-20 relative">
+                            <Image layout='fill' src={"/images/007_point.svg"} alt="" />
+                        </div>
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Play-to-Earn</p>
                         <p className="text-base text-gray-400 xl:text-xl">
                             Most of the ArcadeChain games will allow you to win rewards paid out in stable coin.
@@ -69,8 +81,10 @@ const HomeComp = () => {
 
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
-                        <img className="h-11 w-11 xl:h-20 xl:w-20" src={"/images/004_dollar.svg"}
-                            alt="" />
+                        <div className="h-11 w-11 xl:h-20 xl:w-20 relative">
+                            <Image layout='fill' src={"/images/004_dollar.svg"}
+                                alt="" />
+                        </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Stable coin</p>
                         <p className="text-base text-gray-400 xl:text-xl">
@@ -79,8 +93,10 @@ const HomeComp = () => {
                     </div>
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
-                        <img className="h-11 w-11 xl:h-20 xl:w-20" src={"/images/003_happy.svg"}
-                            alt="" />
+                        <div className="h-11 w-11 xl:h-20 xl:w-20 relative">
+                            <Image layout='fill' src={"/images/003_happy.svg"}
+                                alt="" />
+                        </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Community driven</p>
                         <p className="text-base text-gray-400 xl:text-xl">
@@ -91,8 +107,10 @@ const HomeComp = () => {
 
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
-                        <img className="h-11 w-11 xl:h-20 xl:w-20" src={"/images/001_blockchain.svg"}
-                            alt="" />
+                        <div className="h-11 w-11 xl:h-20 xl:w-20 relative">
+                            <Image layout='fill' src={"/images/001_blockchain.svg"}
+                                alt="" />
+                        </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Multi and Cross-chain</p>
                         <p className="text-base text-gray-400 xl:text-xl">
@@ -105,17 +123,17 @@ const HomeComp = () => {
             <div
                 className="flex flex-col items-center gap-8 p-4 mt-16 rounded-2xl bg-slate-800/40 md:p-10 lg:flex-row lg:gap-14 xl:gap-55 xl:py-26 xl:px-38">
                 <div>
-                    <h2 className="text-xl font-bold md:text-4xl text-white">Initial coin offering and token pre-sale</h2>
+                    <h2 className="text-xl font-bold md:text-6xl text-white">Token pre-sales</h2>
 
                     <p className="mt-2 text-left text-gray-400 md:mt-10 xl:text-2xl">
-                        Our goal is to have the initial coin offering in the quarter four of 2022 followed by public sale and CEX listing in early 2023. <br />
+                        Our goal is to have a pre-sales event in the quarter four of 2022 followed by public sale and CEX listing in early 2023. <br />
                         The pre-sale will be open to everyone willing to participate with a cap of $5000 per person. Token price will be set to $0.01 per ACT. <br />
                         The pre-sale is capped at 5% of total supply (please see tokenomics below).
                     </p>
 
                 </div>
 
-                <img src={"/images/arcade-machine.png"} alt="arcade machine"
+                <Image src={"/images/arcade-machine.png"} alt="arcade machine"
                     srcSet="images/arcade-machine@2x 2x.png"
                     width="257" height="404" />
             </div>
@@ -127,7 +145,10 @@ const HomeComp = () => {
                         <img src={"/images/roadmap.svg"} alt="" />
                     </picture>
                 </div>
-                <img className="absolute inset-x-0 top-0 w-full -z-10 lg:bottom-0"
+                {/* <img className="absolute inset-x-0 top-0 w-full -z-10 lg:bottom-0"
+                    src={"/images/3d-space-scene.webp"} alt="" /> */}
+
+                <Image layout="fill" objectFit="contain" className="absolute inset-x-0 top-0 w-full -z-10 lg:bottom-0"
                     src={"/images/3d-space-scene.webp"} alt="" />
             </div>
 
@@ -137,18 +158,40 @@ const HomeComp = () => {
                 <div
                     className="mt-6 lg:mt-14 lg:flex lg:items-center lg:justify-between lg:gap-x-18 xl:items-end xl:gap-x-24">
                     <div
-                        className="mx-auto grid w-full max-w-[471px] pb-10 lg:mx-0 xl:max-w-[541px] 2xl:max-w-[701px] 3xl:max-w-[741px]">
-                        <img className="col-span-full row-span-full"
-                            src={"/images/round-chart-2.webp"} alt="" />
+                        className="mx-auto h-full aspect-square relative grid w-full max-w-[471px]  pb-10 lg:mx-0 xl:max-w-[541px] 2xl:max-w-[701px] 3xl:max-w-[741px]">
+                        <Image
+                            layout="fill"
+                            objectFit="contain"
+                            className="col-span-full aspect-square	 min-h-full row-span-full"
+                            src={"/images/round-chart-2.webp"}
+                            alt=""
+                        />
                     </div>
 
                     <div className="mx-auto text-white space-y-10 md:mx-0 md:flex-1 lg:pr-10">
                         <div
                             className="relative mx-auto flex h-[95px] w-11/12 max-w-[595px] flex-col items-center justify-center gap-y-1 bg-gray-900 sm:w-10/12 sm:flex-row sm:justify-between md:w-full lg:flex-col lg:justify-center xl:flex-row xl:justify-between">
-                            <img className="absolute -top-px -left-5 sm:left-[-52px]"
-                                src={"/images/bar-edge-left.svg"} alt="" />
-                            <img className="absolute -top-px -right-5 sm:right-[-52px]"
-                                src={"/images/bar-edge-right.svg"} alt="" />
+
+                            <div className="absolute -top-px -left-5 sm:left-[-52px]">
+                                <div className="relative w-[175px] h-[98px]">
+                                    <Image
+                                        layout="fill"
+                                        src={"/images/bar-edge-left.svg"}
+                                        className='absolute -top-px -right-5 sm:right-[-52px]'
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div className="absolute -top-px -right-5 sm:right-[-52px]">
+                                <div className="relative w-[89px] h-[98px]">
+                                    <Image
+                                        layout="fill"
+                                        src={"/images/bar-edge-right.svg"}
+                                        className='absolute -top-px -right-5 sm:right-[-52px]'
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
 
                             <div className="relative z-20">
                                 <p className="flex items-baseline justify-center gap-x-3 sm:justify-start lg:justify-center xl:justify-start">
@@ -170,10 +213,26 @@ const HomeComp = () => {
 
                         <div
                             className="relative mx-auto flex h-[95px] w-11/12 max-w-[595px] flex-col items-center justify-center gap-y-1 bg-gray-900 sm:w-10/12 sm:flex-row sm:justify-between md:w-full lg:flex-col lg:justify-center xl:flex-row xl:justify-between">
-                            <img className="absolute -top-px -left-5 sm:left-[-52px]"
-                                src={"/images/bar-edge-left.svg"} alt="" />
-                            <img className="absolute -top-px -right-5 sm:right-[-52px]"
-                                src={"/images/bar-edge-right.svg"} alt="" />
+                            <div className="absolute -top-px -left-5 sm:left-[-52px]">
+                                <div className="relative w-[175px] h-[98px]">
+                                    <Image
+                                        layout="fill"
+                                        src={"/images/bar-edge-left.svg"}
+                                        className='absolute -top-px -right-5 sm:right-[-52px]'
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div className="absolute -top-px -right-5 sm:right-[-52px]">
+                                <div className="relative w-[89px] h-[98px]">
+                                    <Image
+                                        layout="fill"
+                                        src={"/images/bar-edge-right.svg"}
+                                        className='absolute -top-px -right-5 sm:right-[-52px]'
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
 
                             <div className="relative z-20">
                                 <p className="flex items-baseline justify-center gap-x-3 sm:justify-start lg:justify-center xl:justify-start">
@@ -195,10 +254,26 @@ const HomeComp = () => {
 
                         <div
                             className="relative mx-auto flex h-[95px] w-11/12 max-w-[595px] flex-col items-center justify-center gap-y-1 bg-gray-900 sm:w-10/12 sm:flex-row sm:justify-between md:w-full lg:flex-col lg:justify-center xl:flex-row xl:justify-between">
-                            <img className="absolute -top-px -left-5 sm:left-[-52px]"
-                                src={"/images/bar-edge-left.svg"} alt="" />
-                            <img className="absolute -top-px -right-5 sm:right-[-52px]"
-                                src={"/images/bar-edge-right.svg"} alt="" />
+                            <div className="absolute -top-px -left-5 sm:left-[-52px]">
+                                <div className="relative w-[175px] h-[98px]">
+                                    <Image
+                                        layout="fill"
+                                        src={"/images/bar-edge-left.svg"}
+                                        className='absolute -top-px -right-5 sm:right-[-52px]'
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div className="absolute -top-px -right-5 sm:right-[-52px]">
+                                <div className="relative w-[89px] h-[98px]">
+                                    <Image
+                                        layout="fill"
+                                        src={"/images/bar-edge-right.svg"}
+                                        className='absolute -top-px -right-5 sm:right-[-52px]'
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
 
                             <div className="relative z-20">
                                 <p className="flex items-baseline justify-center gap-x-3 sm:justify-start lg:justify-center xl:justify-start">
@@ -220,10 +295,26 @@ const HomeComp = () => {
 
                         <div
                             className="relative mx-auto flex h-[95px] w-11/12 max-w-[595px] flex-col items-center justify-center gap-y-1 bg-gray-900 sm:w-10/12 sm:flex-row sm:justify-between md:w-full lg:flex-col lg:justify-center xl:flex-row xl:justify-between">
-                            <img className="absolute -top-px -left-5 sm:left-[-52px]"
-                                src={"/images/bar-edge-left.svg"} alt="" />
-                            <img className="absolute -top-px -right-5 sm:right-[-52px]"
-                                src={"/images/bar-edge-right.svg"} alt="" />
+                            <div className="absolute -top-px -left-5 sm:left-[-52px]">
+                                <div className="relative w-[175px] h-[98px]">
+                                    <Image
+                                        layout="fill"
+                                        src={"/images/bar-edge-left.svg"}
+                                        className='absolute -top-px -right-5 sm:right-[-52px]'
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div className="absolute -top-px -right-5 sm:right-[-52px]">
+                                <div className="relative w-[89px] h-[98px]">
+                                    <Image
+                                        layout="fill"
+                                        src={"/images/bar-edge-right.svg"}
+                                        className='absolute -top-px -right-5 sm:right-[-52px]'
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
 
                             <div className="relative z-20">
                                 <p className="flex items-baseline justify-center gap-x-3 sm:justify-start lg:justify-center xl:justify-start">
@@ -245,10 +336,26 @@ const HomeComp = () => {
 
                         <div
                             className="relative mx-auto flex h-[95px] w-11/12 max-w-[595px] flex-col items-center justify-center gap-y-1 bg-gray-900 sm:w-10/12 sm:flex-row sm:justify-between md:w-full lg:flex-col lg:justify-center xl:flex-row xl:justify-between">
-                            <img className="absolute -top-px -left-5 sm:left-[-52px]"
-                                src={"/images/bar-edge-left.svg"} alt="" />
-                            <img className="absolute -top-px -right-5 sm:right-[-52px]"
-                                src={"/images/bar-edge-right.svg"} alt="" />
+                            <div className="absolute -top-px -left-5 sm:left-[-52px]">
+                                <div className="relative w-[175px] h-[98px]">
+                                    <Image
+                                        layout="fill"
+                                        src={"/images/bar-edge-left.svg"}
+                                        className='absolute -top-px -right-5 sm:right-[-52px]'
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div className="absolute -top-px -right-5 sm:right-[-52px]">
+                                <div className="relative w-[89px] h-[98px]">
+                                    <Image
+                                        layout="fill"
+                                        src={"/images/bar-edge-right.svg"}
+                                        className='absolute -top-px -right-5 sm:right-[-52px]'
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
 
                             <div className="relative z-20">
                                 <p className="flex items-baseline justify-center gap-x-3 sm:justify-start lg:justify-center xl:justify-start">
@@ -270,10 +377,26 @@ const HomeComp = () => {
 
                         <div
                             className="relative mx-auto flex h-[95px] w-11/12 max-w-[595px] flex-col items-center justify-center gap-y-1 bg-gray-900 sm:w-10/12 sm:flex-row sm:justify-between md:w-full lg:flex-col lg:justify-center xl:flex-row xl:justify-between">
-                            <img className="absolute -top-px -left-5 sm:left-[-52px]"
-                                src={"/images/bar-edge-left.svg"} alt="" />
-                            <img className="absolute -top-px -right-5 sm:right-[-52px]"
-                                src={"/images/bar-edge-right.svg"} alt="" />
+                            <div className="absolute -top-px -left-5 sm:left-[-52px]">
+                                <div className="relative w-[175px] h-[98px]">
+                                    <Image
+                                        layout="fill"
+                                        src={"/images/bar-edge-left.svg"}
+                                        className='absolute -top-px -right-5 sm:right-[-52px]'
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div className="absolute -top-px -right-5 sm:right-[-52px]">
+                                <div className="relative w-[89px] h-[98px]">
+                                    <Image
+                                        layout="fill"
+                                        src={"/images/bar-edge-right.svg"}
+                                        className='absolute -top-px -right-5 sm:right-[-52px]'
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
 
                             <div className="relative z-20">
                                 <p className="flex items-baseline justify-center gap-x-3 sm:justify-start lg:justify-center xl:justify-start">

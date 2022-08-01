@@ -12,13 +12,14 @@
     "web3": "^1.6.1"
   },
   "scripts": {
+    "lint": "next lint",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "watch:css": "npx tailwindcss --postcss -i src/tailwind.css -o src/style.css --watch"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "next"
   },
   "browserslist": {
     "production": [
@@ -36,9 +37,11 @@
     "sha3": "2.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.9",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "autoprefixer": "^9.6.1",
     "eslint": "^8.20.0",
+    "eslint-config-next": "12.2.3",
     "postcss": "^8.4.14",
     "prettier": "^2.6.2",
     "prettier-plugin-tailwindcss": "^0.1.11",
