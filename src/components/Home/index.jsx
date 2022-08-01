@@ -10,14 +10,9 @@ const HomeComp = () => {
                 </center>
             </div>
             <div className="text-center pt-20" id={'header-text'}>
-                <h1 className="text-[28px] font-bold tracking-tight text-white md:text-6xl lg:hidden">
+                <h1 className="font-bold tracking-tight text-white text-7xl">
                     <span
-                        className="text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Arcade and e-sport hub</span>
-                </h1>
-
-                <h1 className="hidden font-bold tracking-tight text-white text-8xl lg:block">
-                    <span
-                        className="block text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Arcade and e-sport hub</span>
+                        className="block text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Crypto games, initial coin offering and pre-sale</span>
                 </h1>
 
                 <div className="flex justify-center max-w-md mx-auto mt-8 gap-x-6 md:mt-14 md:gap-x-10">
