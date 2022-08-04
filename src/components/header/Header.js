@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Link from 'next/link'
-import Image from "next/image";
 
 class Header extends Component {
 
@@ -14,7 +13,9 @@ class Header extends Component {
                             <Link href='/'>
                                 <a
                                     className="relative z-50 pt-10 flex flex-col items-center gap-2 whitespace-nowrap sm:flex-row md:gap-4" title={"Arcade Chain"}>
-                                    <Image className="" src={"/images/arcade_chain.svg"} width="256" height="256" alt="arcade chain" />
+                                    <picture>
+                                        <img className="pt-10" src={"/images/arcade_chain.svg"} width="256" height="256" alt="arcade chain" />
+                                    </picture>
                                 </a>
                             </Link>
                             <nav id="primary-nav"
