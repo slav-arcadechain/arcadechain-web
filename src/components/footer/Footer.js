@@ -11,17 +11,21 @@ class Footer extends Component {
                     <div className="px-4 py-8 mx-auto mt-10 max-w-container sm:px-10 md:mt-21 3xl:px-0">
                         <div
                             className="grid grid-cols-2 gap-5 xl:gap-60x sm:grid-cols-3 sm:gap-10 md:flex md:justify-between">
-                            <div
-                                className="flex flex-col items-center row-start-1 px-10 mx-auto space-y-2 text-center col-span-full sm:max-w-sm sm:space-y-6 sm:px-0 md:mx-0 md:max-w-xs md:items-start md:text-left">
+                            <div className="ow-start-2 space-y-4 text-center col-span-full sm:col-span-1 sm:col-start-1 sm:row-start-2 sm:text-left md:space-y-6">
                                 <Link href='/'>
                                     <a
                                         className="relative z-50 flex flex-col items-center gap-2 whitespace-nowrap sm:flex-row md:gap-4" title={"Arcade Chain"}>
                                         <Image className="" src={"/images/arcade_chain.svg"} width="256" height="256" alt="arcade chain" />
                                     </a>
                                 </Link>
-                                <p className="text-xs text-gray-400 md:text-sm">
 
-                                </p>
+                            </div>
+                            <div className="row-start-2 space-y-4 text-center col-span-full sm:col-span-1 sm:col-start-2 sm:row-start-2 sm:text-left md:space-y-6">
+                                <h3 className="font-bold text-white uppercase">Links</h3>
+                                <ul className="space-y-2 text-sm text-gray-400 lowercase">
+                                    <li><Link href='/arcade_chain_whitepaper.pdf'><a target='_blank' rel='noreferrer'>White Paper</a></Link></li>
+                                    <li><Link href='https://stats.uptimerobot.com/4JKrysz4ng/792409760'><a target='_blank' rel='noreferrer'>Site Monitoring</a></Link></li>
+                                </ul>
                             </div>
                             <div
                                 className="row-start-3 space-y-4 text-center col-span-full sm:col-span-1 sm:col-start-3 sm:row-start-2 sm:text-left md:space-y-6">
