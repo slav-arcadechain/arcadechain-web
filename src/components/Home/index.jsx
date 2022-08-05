@@ -21,7 +21,7 @@ const HomeComp = () => {
                         <a href='#roadmap' title={"roadmap"}>
                             <span className="relative z-20">Learn More</span>
                         </a>
-                        <Image layout="fill" className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="" />
+                        <Image layout="fill" className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="button gradient" />
 
                     </button>
                 </div>
@@ -35,7 +35,7 @@ const HomeComp = () => {
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                         <div className="relative h-11 w-11 xl:h-20 xl:w-20">
                             <Image layout="fill" src={"/images/002_joystick.svg"}
-                                alt="" />
+                                alt="joystick" />
                         </div>
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Entertaining</p>
                         <p className="text-base text-gray-400 xl:text-xl">
@@ -47,7 +47,7 @@ const HomeComp = () => {
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                         <div className="relative h-11 w-11 xl:h-20 xl:w-20">
                             <Image layout="fill" src={"/images/005_wallet.svg"}
-                                alt="" />
+                                alt="wallet" />
                         </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Passive income</p>
@@ -61,7 +61,7 @@ const HomeComp = () => {
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                         <div className="relative h-11 w-11 xl:h-20 xl:w-20">
-                            <Image layout="fill" src={"/images/007_point.svg"} alt="" />
+                            <Image layout="fill" src={"/images/007_point.svg"} alt="point" />
                         </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Play-to-Earn</p>
@@ -76,7 +76,7 @@ const HomeComp = () => {
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                         <div className="relative h-11 w-11 xl:h-20 xl:w-20">
                             <Image layout="fill" src={"/images/004_dollar.svg"}
-                                alt="" />
+                                alt="dollar" />
                         </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Stable coin</p>
@@ -88,7 +88,7 @@ const HomeComp = () => {
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                         <div className="relative h-11 w-11 xl:h-20 xl:w-20">
                             <Image layout="fill" src={"/images/003_happy.svg"}
-                                alt="" />
+                                alt="happy" />
                         </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Community driven</p>
@@ -102,7 +102,7 @@ const HomeComp = () => {
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                         <div className="relative h-11 w-11 xl:h-20 xl:w-20">
                             <Image layout="fill" src={"/images/001_blockchain.svg"}
-                                alt="" />
+                                alt="blockchain" />
                         </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Multi and Cross-chain</p>
@@ -136,14 +136,14 @@ const HomeComp = () => {
                 <div id='roadmap' className="px-4 pb-8 mx-auto mt-10 space-y-6 max-w-container sm:px-10 md:mt-26 md:space-y-30 3xl:px-0">
                     <h2 className="text-xl font-bold text-center md:text-5xl text-white">Roadmap</h2>
                     <div className="w-full aspect-square relative">
-                        <Image layout="fill" src={"/images/roadmap.svg"} alt="" />
+                        <Image layout="fill" src={"/images/roadmap.svg"} alt="roadmap" />
                     </div>
                 </div>
                 <div className="absolute inset-x-0 top-0 w-full -z-10 lg:bottom-0">
                     <Image
                         layout="fill"
                         objectFit="contain"
-                        src={"/images/3d-space-scene.webp"} alt="" />
+                        src={"/images/3d-space-scene.webp"} alt="space scene" />
                 </div>
             </div>
 
@@ -158,7 +158,7 @@ const HomeComp = () => {
                             <Image
                                 layout="fill"
                                 objectFit="contain"
-                                src={"/images/round-chart-2.webp"} alt="" />
+                                src={"/images/round-chart-2.webp"} alt="round chart" />
                         </div>
                     </div>
                     {/* 175 * 98 */}
@@ -168,12 +168,12 @@ const HomeComp = () => {
 
                             <div className="-top-px absolute -left-5 sm:left-[-52px]">
                                 <div className="relative w-[175px] h-[98px]">
-                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="" />
+                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="bar edge left" />
                                 </div>
                             </div>
                             <div className="absolute -top-px -right-5 sm:right-[-52px]">
                                 <div className="relative w-[88px] h-[98px]">
-                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="" />
+                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="bar edge right" />
                                 </div>
                             </div>
 
@@ -201,13 +201,13 @@ const HomeComp = () => {
 
                             <div className="-top-px absolute -left-5 sm:left-[-52px]">
                                 <div className="relative w-[175px] h-[98px]">
-                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="" />
+                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="bar edge left" />
                                 </div>
                             </div>
 
                             <div className="absolute -top-px -right-5 sm:right-[-52px]">
                                 <div className="relative w-[88px] h-[98px]">
-                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="" />
+                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="bar edge right" />
                                 </div>
                             </div>
 
@@ -234,12 +234,12 @@ const HomeComp = () => {
 
                             <div className="-top-px absolute -left-5 sm:left-[-52px]">
                                 <div className="relative w-[175px] h-[98px]">
-                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="" />
+                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="bar edge left" />
                                 </div>
                             </div>
                             <div className="absolute -top-px -right-5 sm:right-[-52px]">
                                 <div className="relative w-[88px] h-[98px]">
-                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="" />
+                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="bar edge right" />
                                 </div>
                             </div>
 
@@ -266,12 +266,12 @@ const HomeComp = () => {
 
                             <div className="-top-px absolute -left-5 sm:left-[-52px]">
                                 <div className="relative w-[175px] h-[98px]">
-                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="" />
+                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="bar edge left" />
                                 </div>
                             </div>
                             <div className="absolute -top-px -right-5 sm:right-[-52px]">
                                 <div className="relative w-[88px] h-[98px]">
-                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="" />
+                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="bar edge right" />
                                 </div>
                             </div>
                             <div className="relative z-20">
@@ -297,12 +297,12 @@ const HomeComp = () => {
 
                             <div className="-top-px absolute -left-5 sm:left-[-52px]">
                                 <div className="relative w-[175px] h-[98px]">
-                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="" />
+                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="bar edge left" />
                                 </div>
                             </div>
                             <div className="absolute -top-px -right-5 sm:right-[-52px]">
                                 <div className="relative w-[88px] h-[98px]">
-                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="" />
+                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="bar edge right" />
                                 </div>
                             </div>
                             <div className="relative z-20">
@@ -328,12 +328,12 @@ const HomeComp = () => {
 
                             <div className="-top-px absolute -left-5 sm:left-[-52px]">
                                 <div className="relative w-[175px] h-[98px]">
-                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="" />
+                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="bar edge left" />
                                 </div>
                             </div>
                             <div className="absolute -top-px -right-5 sm:right-[-52px]">
                                 <div className="relative w-[88px] h-[98px]">
-                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="" />
+                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="bar edge right" />
                                 </div>
                             </div>
                             <div className="relative z-20">

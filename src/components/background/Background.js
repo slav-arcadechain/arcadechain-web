@@ -8,10 +8,10 @@ class Background extends Component {
                 <div className="absolute inset-x-0 top-0 grid -z-10">
                     <picture>
                         <img className="min-h-[392px] object-cover object-[87%]" src={"/images/hero-bg.webp"}
-                            alt="" />
+                            alt="hero-bg" />
                     </picture>
                     <picture>
-                        <img className="object-contain w-full" src={"/images/stellar-bg-2.webp"} alt="" />
+                        <img className="object-contain w-full" src={"/images/stellar-bg-2.webp"} alt="stellar-bg-2" />
                     </picture>
                 </div>
             </>
