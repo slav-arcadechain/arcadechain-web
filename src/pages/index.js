@@ -12,7 +12,6 @@ const Home = () => {
             <div className="relative overflow-hidden">
                 <Head>
                     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
                     <meta name="description"
                         content="Arcade Chain is crypto game platform where users can play classic and new exiting arcade games using a stable coin. Crypto initial token offering - pre-sale" />
                     <meta name="keywords"
@@ -36,7 +35,6 @@ const Home = () => {
                 </Head>
                 <Background />
                 <Header />
-
                 <main className="mx-auto mt-16 max-w-container px-4 sm:mt-24 sm:px-10 3xl:px-0">
                     <HomeComp />
                 </main>
@@ -47,7 +45,7 @@ const Home = () => {
                             layout='fill'
                             objectFit='cover'
                             src={'/images/stellar-bg-2.webp'}
-                            alt=""
+                            alt="stellar bg"
                         />
                     </div>
                 </div>
