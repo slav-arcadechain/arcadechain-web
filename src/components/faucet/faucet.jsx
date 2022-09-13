@@ -24,9 +24,8 @@ const FaucetComp = () => {
                 <div className="flex items-center justify-center pb-6 md:py-0 md:w-1/2">
                     <form name="faucet"
                           method="POST"
-                          action="/Slot"
                           data-netlify-recaptcha="true"
-                          data-netlify="true">
+                          data-netlify="true" netlify>
                         <div
                             className="flex flex-col p-1.5 overflow-hidden border rounded-lg dark:border-gray-600 lg:flex-row dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
                             <input
