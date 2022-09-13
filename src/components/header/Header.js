@@ -19,6 +19,8 @@ const Header = () => {
                         </Link>
                         <nav id="primary-nav"
                             className={`fixed inset-0 flex flex-col items-center text-xl duration-200 ease-in-out ${showSidebar ? 'translate-x-0' : 'translate-x-full'} z-90 gap-7 bg-slate-900/80 pt-28 backdrop-blur md:left-1/2 xl:static xl:translate-x-0 xl:flex-row xl:items-center xl:gap-6 xl:bg-transparent xl:px-0 xl:pt-0 xl:text-base`}>
+                            <Link  className='font-bold text-white text-lg'  href='/Slot'><a target='_self' rel='noreferrer' className='font-bold text-white text-lg'>Play Slot (Beta)</a></Link>
+                            <Link  className='font-bold text-white text-lg'  href='/faucet'><a target='_self' rel='noreferrer' className='font-bold text-white text-lg'>TUSD faucet</a></Link>
                             <Link href='/arcade_chain_whitepaper.pdf'><a target='_blank' rel='noreferrer' className='font-bold text-white text-lg'>White Paper</a></Link>
                         </nav>
                     </div>

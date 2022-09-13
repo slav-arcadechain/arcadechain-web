@@ -9,6 +9,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-unity-webgl": "^9.0.4",
     "web3": "^1.6.1"
   },
   "scripts": {
