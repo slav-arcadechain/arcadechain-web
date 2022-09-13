@@ -1,11 +1,13 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+
 
 export const Step = () => {
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 text-white">
-                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight  sm:text-4xl md:mx-auto">
+                <h1 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight  sm:text-4xl md:mx-auto">
           <span className="relative inline-block">
             <svg
                 viewBox="0 0 52 24"
@@ -32,10 +34,10 @@ export const Step = () => {
             <span className="relative">Slot</span>
           </span>{' '}
                    game meets the blockchain.
+                </h1>
+                <h2 className="text-base text-gray-600 md:text-lg">
+                   Explore the classic game of Slot in entirely new setting. All transactions are securely registered on the block chain with all fees and winning in stable coin for your convenience and piece of mind.
                 </h2>
-                <p className="text-base text-gray-700 md:text-lg">
-                   Explore the classic game of Slot in entirely new setting. All transactions are securely registered on the block chain.
-                </p>
             </div>
             <div className="relative grid gap-8 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-4 sm:grid-cols-2">
                 <div className="absolute inset-0 flex items-center justify-center sm:hidden lg:flex">
@@ -44,55 +46,54 @@ export const Step = () => {
                 <div
                     className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                     <div className="flex items-center justify-between mb-2">
-                        <p className="text-lg font-bold leading-5 text-white">Wallet</p>
+                        <p className="text-lg font-bold leading-5 text-white">Connect your wallet</p>
                         <p className="flex items-center justify-center w-6 h-6 font-bold rounded text-deep-purple-accent-400 text-white">
-                            1
                         </p>
+                        <Image src={"/images/wallet.png"} height="64" width="64"/>
                     </div>
-                    <p className="text-sm text-gray-400">
-                        Connect your wallet. We recommend that you use Metamask but any web3 crypto wallet should work. Remember to use Cronos Test network.
-                    </p>
+                    <h3 className="text-sm text-gray-400">
+                        We recommend that you use Metamask but any web3 crypto wallet should work. Remember to use Cronos Test network.
+                    </h3>
                 </div>
                 <div
                     className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                     <div className="flex items-center justify-between mb-2">
-                        <p className="text-lg font-bold leading-5 text-white">Connect</p>
+                        <p className="text-lg font-bold leading-5 text-white">Sign in with your wallet</p>
                         <p className="flex items-center justify-center w-6 h-6 font-bold rounded text-deep-purple-accent-400 text-white">
-                            2
                         </p>
+                        <Image src={"/images/connect.png"} height="64" width="64"/>
+
                     </div>
-                    <p className="text-sm text-gray-400">
-                        Sign in with your wallet. No account creation or credentials creation is needed.
-                    </p>
+                    <h3 className="text-sm text-gray-400">
+                        You are in control - no account, credentials creation is needed.
+                    </h3>
                 </div>
                 <div className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
 
                     <div className="flex items-center justify-between mb-2">
-                        <p className="text-lg font-bold leading-5 text-white">Approve</p>
+                        <p className="text-lg font-bold leading-5 text-white">Approve in-game tokens</p>
                         <p className="flex items-center justify-center w-6 h-6 font-bold rounded text-deep-purple-accent-400 text-white">
-                            3
                         </p>
+                        <Image src={"/images/approved.png"} height="64" width="64"/>
                     </div>
-                    <p className="text-sm text-gray-400">
-
-
-                        <Link  className='font-bold text-white text-lg'  href='/faucet'><a target='_self' rel='noreferrer' className='font-bold '>Get your in game TUSD tokens. </a></Link>
+                    <h3 className="text-sm text-gray-400">
+                        <Link  className='font-bold text-white text-lg'  href='/faucet'><a target='_self' rel='noreferrer' className='font-bold text-gray-200 underline '>Get your in game TUSD tokens. </a></Link>
                         <br/>
-                        Approve them for in-game spending. Approving tokens by itself won't charge you.
-                    </p>
+                        Approve TUSD for in-game spending. Approval of tokens will not deduct your funds until play the game.
+                    </h3>
                 </div>
                 <div
                     className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
 
                     <div className="flex items-center justify-between mb-2">
-                        <p className="text-lg font-bold leading-5 text-white">Play</p>
+                        <p className="text-lg font-bold leading-5 text-white">Play slot and win</p>
                         <p className="flex items-center justify-center w-6 h-6 font-bold rounded text-deep-purple-accent-400 text-white ">
-                            4
                         </p>
+                        <Image src={"/images/controller.png"} height="64" width="64"/>
                     </div>
-                    <p className="text-sm text-gray-400">
+                    <h3 className="text-sm text-gray-400">
                         Play the game by pressing the Spin button. Wait a few moments and see what is your win today!
-                    </p>
+                    </h3>
                 </div>
             </div>
         </div>

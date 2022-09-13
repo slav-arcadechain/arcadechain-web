@@ -6,9 +6,7 @@ import SlotComp from "../components/Games/slot";
 import Footer from "../components/footer/Footer";
 import Image from "next/image";
 
-
 class Slot extends Component {
-
     render() {
         return (
             <>
@@ -16,23 +14,22 @@ class Slot extends Component {
                     <Head>
                         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
                         <meta name="description"
-                              content="Arcade Chain is crypto game platform where users can play classic and new exiting arcade games using a stable coin. Crypto initial token offering - pre-sale" />
+                              content="Slot machine game is crypto stable coin enabled game of chance in entirely new setting with unique NFT enhanced game play" />
                         <meta name="keywords"
-                              content="ArcadeChain, Arcade Chain, Arcade, Crypto Game, ICO, initial coin offering, Crypto Token, Crypto Games, Passive Income, Blockchain Games, token pre-sale, pre-sale, stable coin" />
+                              content="ArcadeChain, Arcade Chain, Arcade, Crypto Game, Slot Machine, Slot, NFT, NFTs" />
                         <meta property={"og:locale"} content={"en_US"} />
                         <meta property={"og:type"} content={"website"} />
                         <meta property={"og:title"}
                               content={"Arcade Chain - Crypto games - initial coin offering - token pre-sale"} />
                         <meta property={"og:description"}
-                              content={"Arcade Chain is crypto game platform where users can play classic and new exiting arcade games using a stable coin. Crypto initial token offering - pre-sale"} />
-                        <meta property={"og:url"} content={"https://www.arcadechain.io"} />
+                              content={"Slot machine game is crypto stable coin enabled game of chance in entirely new setting with unique NFT enhanced game play"} />
+                        <meta property={"og:url"} content={"https://www.arcadechain.io/Slot"} />
                         <meta property={"og:site_name"} content={"Arcade Chain"} />
                         <meta property={"og:image"} content={"https://arcadechain-images.s3.amazonaws.com/arcade_chain_og.jpg"} />
-                        <meta property={"og:video"} content={"https://www.arcadechain.io/videos/intro_small.mp4"} />
                         <meta property={"twitter:card"} content={"summary"} />
                         <meta name="twitter:site" content="https://www.arcadechain.io" />
-                        <meta name="twitter:title" content="Arcade Chain - Crypto games - initial coin offering - token pre-sale" />
-                        <meta name="twitter:description" content="Arcade Chain is crypto game platform where users can play classic and new exiting arcade games using a stable coin. Crypto initial token offering - pre-sale" />
+                        <meta name="twitter:title" content="Arcade Chain - Slot Machine - crypt stable coin game" />
+                        <meta name="twitter:description" content="Slot machine game is crypto stable coin enabled game of chance in entirely new setting with unique NFT enhanced game play" />
                         <meta name="twitter:creator" content="@arcadechain" />
                         <title>Arcade Chain - Slot Machine Crypto Game</title>
                     </Head>
@@ -56,7 +53,6 @@ class Slot extends Component {
             </>
         );
     }
-
 }
 
 export default Slot;

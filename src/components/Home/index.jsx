@@ -67,7 +67,7 @@ const HomeComp = () => {
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Play-to-Earn</p>
                         <p className="text-base text-gray-400 xl:text-xl">
                             Most of the ArcadeChain games will allow you to win rewards paid out in stable coin.
-                            In addition, holders of NFT tokens minted by members of the community will be able to increase their chances in all games-of-chance.
+                            In addition, holders of NFT tokens minted by members of the community will be able to increase their odds in all games-of-chance.
                         </p>
                     </div>
 
@@ -107,7 +107,7 @@ const HomeComp = () => {
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Multi and Cross-chain</p>
                         <p className="text-base text-gray-400 xl:text-xl">
-                            We starting on Binance Smart Chain but our vision is to support multiple chains for the convenience of the players.
+                            We starting on Cronos Chain but our vision is to support multiple chains for the convenience of the players.
                         </p>
                     </div>
                 </div>

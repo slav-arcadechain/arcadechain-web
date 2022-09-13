@@ -6,8 +6,10 @@ const FaucetComp = () => {
         <>
 
             <section
-                className="flex flex-col max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 md:flex-row md:h-48">
-                <div className="md:flex md:items-center md:justify-center md:w-1/2 md:bg-gray-700 md:dark:bg-gray-800">
+                       className="flex flex-col max-w-4xl mx-auto overflow-hidden  rounded-lg shadow-lg dark:bg-gray-800 md:flex-row md:h-48 border rounded-lg dark:border-gray-600 lg:flex-row dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
+                {/*<section className=" flex flex-col max-w-4xl mx-auto overflow-hidden   rounded-lg shadow-lg    ">*/}
+                <div className="md:flex md:items-center md:justify-center md:w-1/2 ">
+                    {/*<div className="px-6 py-6 md:px-8 md:py-0 bg-slate-800/40 drop-shadow-white-xl ">*/}
                     <div className="px-6 py-6 md:px-8 md:py-0">
                         <div data-netlify-recaptcha="true"></div>
 
@@ -25,11 +27,17 @@ const FaucetComp = () => {
                     <form name="faucet"
                           method="POST"
                           action="/thank-you"
+                          netlify-honeypot="bot-field"
+                          data-netlify-recaptcha="true"
                           data-netlify="true">
                         <input type="hidden" name="form-name" value="faucet" />
                         <div
                             className="flex flex-col p-1.5 overflow-hidden border rounded-lg dark:border-gray-600 lg:flex-row dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
-                            <input
+                            <p className="hidden">
+                                <label>
+                                    Don’t fill this out if you’re human: <input name="bot-field"/>
+                                </label>
+                            </p><input
                                 className="px-6 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none dark:bg-gray-800 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent"
                                 type="text" name="wallet" placeholder="0x00000000000000"
                                 aria-label="Your wallet address"/>
@@ -38,10 +46,13 @@ const FaucetComp = () => {
                                     className="px-4 py-3 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none">Get
                                 TUSD
                             </button>
+                            <div data-netlify-recaptcha="true"></div>
                         </div>
                     </form>
                 </div>
             </section>
+
+
             <div className="grid place-items-center mb-80">
                 <div className="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800 mt-20">
                     <div className="mt-2">
