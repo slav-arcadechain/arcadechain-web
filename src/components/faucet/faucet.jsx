@@ -22,8 +22,9 @@ const FaucetComp = () => {
                 </div>
 
                 <div className="flex items-center justify-center pb-6 md:py-0 md:w-1/2">
-                    <form name="contact"
+                    <form name="faucet"
                           method="POST"
+                          action="/Slot"
                           data-netlify-recaptcha="true"
                           data-netlify="true">
                         <div
