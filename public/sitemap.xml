@@ -2,7 +2,19 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.arcadechain.io/</loc>
-        <lastmod>2022-08-05</lastmod>
+        <lastmod>2022-09-14</lastmod>
+        <priority>1.0</priority>
+        <changefreq>Daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.arcadechain.io/slot</loc>
+        <lastmod>2022-09-14</lastmod>
+        <priority>1.0</priority>
+        <changefreq>Daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.arcadechain.io/faucet</loc>
+        <lastmod>2022-09-14</lastmod>
         <priority>1.0</priority>
         <changefreq>Daily</changefreq>
     </url>

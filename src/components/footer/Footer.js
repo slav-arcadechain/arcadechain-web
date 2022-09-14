@@ -23,6 +23,8 @@ class Footer extends Component {
                             <div className="row-start-2 space-y-4 text-center col-span-full sm:col-span-1 sm:col-start-2 sm:row-start-2 sm:text-left md:space-y-6">
                                 <h3 className="font-bold text-white uppercase">Links</h3>
                                 <ul className="space-y-2 text-sm text-gray-400 lowercase">
+                                    <li><Link href='/slot'><a target='_self' rel='noreferrer'>Slot Game (beta)</a></Link></li>
+                                    <li><Link href='/faucet'><a target='_self' rel='noreferrer'>TUSD faucet</a></Link></li>
                                     <li><Link href='/arcade_chain_whitepaper.pdf'><a target='_blank' rel='noreferrer'>White Paper</a></Link></li>
                                     <li><Link href='https://stats.uptimerobot.com/4JKrysz4ng/792409760'><a target='_blank' rel='noreferrer'>Site Monitoring</a></Link></li>
                                 </ul>
