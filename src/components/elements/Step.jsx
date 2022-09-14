@@ -31,7 +31,7 @@ export const Step = () => {
                   height="24"
               />
             </svg>
-            <span className="relative">Slot</span>
+            <span className="relative pl-2">Slot</span>
           </span>{' '}
                    game meets the blockchain.
                 </h1>
