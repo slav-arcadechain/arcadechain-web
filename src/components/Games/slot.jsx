@@ -9,7 +9,7 @@ const SlotComp = () => {
             <Step />
             {/*<Reminder />*/}
             <div className="grid  place-items-center">
-                <iframe src="/games/slot/index.html" width="960px" height="540px"></iframe>
+                <iframe src="/games/slot/index.html" width="960px" height="540px" scrolling="no"></iframe>
             </div>
         </>
     )
