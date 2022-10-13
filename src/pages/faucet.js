@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Head from "next/head";
 import Background from "../components/background/Background";
 import Header from "../components/header/Header";
+import ERC20 from "../components/elements/ERC20"
 import SlotComp from "../components/Games/slot";
 import Footer from "../components/footer/Footer";
 import Image from "next/image";
@@ -37,11 +38,18 @@ class Slot extends Component {
                         <meta name="twitter:creator" content="@arcadechain" />
                         <title>Arcade Chain - Slot Machine Crypto Game</title>
                     </Head>
-                    <Background />
+                    <Background />     
                     <Header />
+                    
                     <main className="mx-auto mt-16 max-w-container px-4 sm:mt-24 sm:px-10 3xl:px-0">
+          
                         <FaucetComp />
                     </main>
+
+                    <div className="absolute ml-150">
+                        <ERC20/>
+                    </div>
+                    
                     <Footer />
                     <div className='absolute inset-x-0 bottom-0 -z-10 w-full'>
                         <div className='relative h-screen lg:h-[120rem] w-full'>
