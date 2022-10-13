@@ -25,12 +25,9 @@ const FaucetComp = () => {
                 </div>
 
                 <div className="flex items-center justify-center pb-6 md:py-0 md:w-1/2">
-                    {/* <div className="absolute mb-30 mr-34 font-poppins text-sm font-bold text-white md:h-[45px] md:w-[200px] md:text-base ml-6">
-                        <button type="submit" >
-                            <p className="mt-3 ml-5 text-sm font-bold text-white">Add TUSD to Metamask</p>        
-                            <Image layout="fill" className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="button gradient" />                        
-                        </button>
-                    </div> */}
+                    <div className="flex mb-38">
+                        <ERC20/>
+                    </div>
                     <form name="faucet"
                           method="POST"
                           action="/thank-you"
