@@ -93,7 +93,7 @@ const HomeComp = () => {
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Community driven</p>
                         <p className="text-base text-gray-400 xl:text-xl">
-                            Game clans and competitions are the the hart of our vision of building community around the project.
+                            Game clans and competitions are the hart of our vision of building community around the project.
                             All ACT holder will have their say about the direction our platform evolves into.
                         </p>
                     </div>
