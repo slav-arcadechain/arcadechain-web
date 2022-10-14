@@ -1,8 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import ERC20 from "../elements/erc20"
-const FaucetComp = () => {
 
+
+
+const FaucetComp = () => {
+    
     return (
         <>
 
@@ -26,7 +29,7 @@ const FaucetComp = () => {
 
                 <div className="flex items-center justify-center pb-6 md:py-0 md:w-1/2">
                     <div className="flex mb-38">
-                        <ERC20/>
+                        <ERC20 />
                     </div>
                     <form name="faucet"
                           method="POST"
