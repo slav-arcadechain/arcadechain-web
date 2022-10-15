@@ -19,8 +19,8 @@ export default function ERC20() {
         })
     }
 
-      async function addTUSD() {
-         await ethereum.request({
+       function addTUSD() {
+          ethereum.request({
             method: 'wallet_watchAsset',
             params: {
               type: 'ERC20',
@@ -41,8 +41,8 @@ export default function ERC20() {
                 method: 'eth_chainId',
             })
             if(currentChainId!=cronosTestnedId) {
-                switchChain()
-                addTUSD()
+                await switchChain()
+                addTUSD()     
             } else {
                 addTUSD()
             }
