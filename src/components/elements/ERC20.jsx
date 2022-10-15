@@ -12,15 +12,15 @@ export default function ERC20() {
     const tokenSymbol = 'TUSD';
     const tokenDecimals = 18;
 
-     async function switchChain() {
-        await ethereum.request({
+      async function switchChain() {
+         await ethereum.request({
             method: 'wallet_switchEthereumChain',
             params: [{ chainId: cronosTestnedId }],
         })
     }
 
-       function addTUSD() {
-          ethereum.request({
+       async function addTUSD() {
+          await ethereum.request({
             method: 'wallet_watchAsset',
             params: {
               type: 'ERC20',
@@ -42,9 +42,9 @@ export default function ERC20() {
             })
             if(currentChainId!=cronosTestnedId) {
                 await switchChain()
-                addTUSD()     
+                await addTUSD()     
             } else {
-                addTUSD()
+                await addTUSD()
             }
             
         }
