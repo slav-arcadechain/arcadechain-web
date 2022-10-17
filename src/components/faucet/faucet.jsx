@@ -26,37 +26,40 @@ const FaucetComp = () => {
                             while.</p>
                     </div>
                 </div>
-
+                
                 <div className="flex items-center justify-center pb-6 md:py-0 md:w-1/2">
-                    <div className="flex mb-38">
-                        <ERC20 />
-                    </div>
-                    <form name="faucet"
-                          method="POST"
-                          action="/thank-you"
-                          data-netlify="true">
-                        <input type="hidden" name="form-name" value="faucet" />
-                        <div
-                            className="flex flex-col p-1.5 overflow-hidden border rounded-lg dark:border-gray-600 lg:flex-row dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
-                            <input
-                                className="px-6 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none dark:bg-gray-800 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent"
-                                type="text" 
-                                name="wallet" 
-                                pattern="[0][x][a-zA-Z0-9]{40}"
-                                title="Incorrect wallet address"
-                                placeholder="0x00000000000000"
-                                aria-label="Your wallet address"/>
-
-                            <button type="submit"
-                                    className="px-4 py-3 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none">Get
-                                TUSD
-                            </button>
+                    <div className="mb-10">
+                        <div className="mb-2 ml-5">
+                            <ERC20 chainId='0x152' tokenAddress = '0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e' tokenSymbol = 'TUSD'  tokenDecimals={18}/>
                         </div>
-                    </form>
+                        <form name="faucet"
+                            method="POST"
+                            action="/thank-you"
+                            data-netlify="true">
+                            <input type="hidden" name="form-name" value="faucet" />
+                            
+                            <div
+                                className="flex flex-col p-1.5 overflow-hidden border rounded-lg dark:border-gray-600 lg:flex-row dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
+                                <input
+                                    className="px-6 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none dark:bg-gray-800 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent"
+                                    type="text" 
+                                    name="wallet" 
+                                    pattern="[0][x][a-zA-Z0-9]{40}"
+                                    title="Incorrect wallet address"
+                                    placeholder="0x00000000000000"
+                                    aria-label="Your wallet address"/>
+
+                                <button type="submit"
+                                        className="px-4 py-3 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none">Get
+                                    TUSD
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
                 </div>
+
             </section>
-
-
             <div className="grid place-items-center mb-80">
                 <div className="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800 mt-20">
                     <div className="mt-2">
