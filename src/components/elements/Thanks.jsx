@@ -1,4 +1,3 @@
-import React from "react";
 import ERC20 from "../elements/erc20"
 export const ThankYouComp = () => {
     return (
