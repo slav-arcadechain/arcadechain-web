@@ -1,8 +1,6 @@
-import Script from "next/script"
 import { useMoralis } from "react-moralis";
 
-
-export default function ERC20({chainId,tokenAddress,tokenSymbol,tokenDecimals}) {   
+export default function ERC20({chainId,tokenAddress,tokenSymbol,tokenDecimals}) {
     const {isAuthenticated,authenticate} = useMoralis()
     let currentChainId
       async function switchChain() {
