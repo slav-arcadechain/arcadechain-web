@@ -16,13 +16,14 @@ function Switchere() {
                 "out": "crypto",
                 "mode": "custom",
                 "width": "512",
-                "out_grp_cur": "crypto_matic"
+                "out_grp_cur": "crypto_matic",
+
             });
-        }, 300)
+        }, 600)
 
     }, []);
 
-    return <div id="switchere" className={'mb-500 pb-100 h-300'}></div>
+    return <div id="switchere" className={'h-40'}></div>
 }
 
 export default Switchere;

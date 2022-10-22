@@ -15,6 +15,7 @@ function GetActToken() {
     const NATIVE = 'NATIVE' // Special address for native token
 
 // WBTC as the default output token
+    const MATIC = '0x0000000000000000000000000000000000001010'
     const WBTC = '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599'
     const theme = {
         borderRadius: 0.5,
@@ -22,7 +23,8 @@ function GetActToken() {
         container: "#1b2654",
         module: "#0c1739",
         primary: "#ffffff",
-        interactive: "#4d4f78"
+        interactive: "#4d4f78",
+        accent: '#2da245',
 
     }
 
@@ -82,23 +84,27 @@ function GetActToken() {
         <main className="mx-auto mt-16 max-w-container px-4 sm:mt-24 sm:px-10 3xl:px-0">
 
             <div className={"grid place-items-center"}>
-                <IntroText leadText={['Exchange', 'your money for crypto.']}
+                <IntroText leadText={['1. ', 'Exchange your money for crypto.']}
                            followText={'For your convenience you are now able to convert your fiat currency to crypto tokens of your choice using wide range of payment methods including payment card and bank transfers.'}/>
                 <Switchere/>
+                <IntroText style={'mt-52'} leadText={['2. ', 'Swap your crypto for ACT token.']}
+                           followText={'It\'s easier then ever to swap crypto you own for our ACT token, directly from our platform.'}/>
 
                 <div className="Uniswap">
                     <SwapWidget
                         width={505}
                         theme={theme}
                         tokenList={UNISWAP_TOKEN_LIST}
-                        defaultInputTokenAddress={NATIVE}
+                        defaultInputTokenAddress={MATIC}
                         defaultInputAmount={2}
-                        defaultOutputTokenAddress={WBTC}
+                        // hideConnectionUI={true}
+                        defaultChainId={137}
+                    defaultOutputTokenAddress={WBTC}
                     />
                 </div>
             </div>
         </main>
-        <Footer/>
+        <Footer/>T
         <div className="absolute inset-x-0 bottom-0 -z-10 w-full">
             <div className="relative h-screen w-full lg:h-[120rem]">
                 <Image

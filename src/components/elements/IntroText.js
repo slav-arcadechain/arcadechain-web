@@ -1,7 +1,7 @@
 import React from "react";
 
 function IntroText(props) {
-    return             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 text-white">
+    return             <div className={"max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 text-white " + props.style}>
         <h1 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight  sm:text-4xl md:mx-auto">
           <span className="relative inline-block">
             <svg
