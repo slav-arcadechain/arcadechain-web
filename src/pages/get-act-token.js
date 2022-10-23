@@ -9,14 +9,9 @@ import IntroText from "../components/elements/IntroText";
 import {SwapWidget} from "@uniswap/widgets";
 
 function GetActToken() {
-    const UNISWAP_TOKEN_LIST = 'https://gateway.ipfs.io/ipns/tokens.uniswap.org'
-
-// Use the native token of the connected chain as the default input token
-    const NATIVE = 'NATIVE' // Special address for native token
-
-// WBTC as the default output token
+    const UNISWAP_TOKEN_LIST = 'http://localhost:3000/tokens.uniswap.org'
     const MATIC = '0x0000000000000000000000000000000000001010'
-    const WBTC = '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599'
+    const TUSD  = '0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e'
     const theme = {
         borderRadius: 0.5,
         fontFamily: '"Helvetica"',
@@ -96,10 +91,10 @@ function GetActToken() {
                         theme={theme}
                         tokenList={UNISWAP_TOKEN_LIST}
                         defaultInputTokenAddress={MATIC}
-                        defaultInputAmount={2}
-                        // hideConnectionUI={true}
-                        defaultChainId={137}
-                    defaultOutputTokenAddress={WBTC}
+                       defaultInputAmount={0.1}
+                        hideConnectionUI={true}
+                        defaultChainId={80001}
+                        defaultOutputTokenAddress={TUSD}
                     />
                 </div>
             </div>
