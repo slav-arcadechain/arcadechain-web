@@ -17,6 +17,7 @@ function GetActToken() {
         fontFamily: '"Helvetica"',
         container: "#1b2654",
         module: "#0c1739",
+        dialog: "#0c1739",
         primary: "#ffffff",
         interactive: "#4d4f78",
         accent: '#2da245',
