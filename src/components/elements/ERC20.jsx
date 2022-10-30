@@ -1,4 +1,5 @@
 import { useMoralis } from "react-moralis";
+import Image from "next/image";
 
 
 function ERC20({color,chainId,tokenAddress,tokenSymbol,tokenDecimals}) {
@@ -41,7 +42,7 @@ function ERC20({color,chainId,tokenAddress,tokenSymbol,tokenDecimals}) {
             <>
                         <button onClick={addToken} className={`relative h-10 w-32 font-poppins text-sm font-bold text-${color} md:h-[54px] md:w-[180px] md:text-base`} >
                             <p className="relative z-20">Add TUSD to Metamask</p>        
-                            <img layout="fill" className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="button gradient" />                        
+                            {/*<Image layout="fill" className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="button gradient" />*/}
                         </button>
             </>       
     )

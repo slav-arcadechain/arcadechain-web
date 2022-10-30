@@ -1,5 +1,5 @@
-import { useMoralis } from "react-moralis";
-import { color } from "web3uikit";
+import {useMoralis} from "react-moralis";
+import Image from "next/image";
 
 function Network({color,chainId,chainName,rpcUrls,nameOfNativeCurrency,blockExplorerUrls}) {
     const {isAuthenticated,authenticate} = useMoralis()
@@ -49,7 +49,7 @@ function Network({color,chainId,chainName,rpcUrls,nameOfNativeCurrency,blockExpl
         <>
                     <button onClick={addChainByButtonClick} className={`relative h-10 w-32 font-poppins text-sm font-bold text-${color} h-150px md:h-[54px] md:w-[180px] md:text-base`} >
                         <p className="relative z-20">Add Cronos Testnet <br/>to Metamask</p>
-                        <img className="absolute inset-0 h-14 " src={"/images/btn-gradient-transparent.webp"} alt="add network button" />
+                        {/*<Image className="absolute inset-0 h-14 " src={"/images/btn-gradient-transparent.webp"} alt="add network button" />*/}
                     </button>
         </>       
 )

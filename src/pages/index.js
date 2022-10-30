@@ -44,6 +44,7 @@ const Home = () => {
                         <Image
                             layout='fill'
                             objectFit='cover'
+                            width={3000} height={200}
                             src={'/images/stellar-bg-2.webp'}
                             alt="stellar bg"
                         />

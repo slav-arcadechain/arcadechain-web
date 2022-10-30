@@ -72,6 +72,8 @@ class Slot extends Component {
               <Image
                 layout="fill"
                 objectFit="cover"
+                width={100} height={200}
+
                 src={"/images/stellar-bg-2.webp"}
                 alt="stellar bg"
               />

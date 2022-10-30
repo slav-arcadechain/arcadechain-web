@@ -48,7 +48,7 @@ export const Step = () => {
                         <p className="text-lg font-bold leading-5 text-white">Connect your wallet</p>
                         <p className="flex items-center justify-center w-6 h-6 font-bold rounded text-deep-purple-accent-400 text-white">
                         </p>
-                        <Image src={"/images/wallet.png"} height="64" width="64"/>
+                        <Image alt={"wallet step"} src={"/images/wallet.png"} height="64" width="64"/>
                     </div>
                     <h3 className="text-sm text-gray-400">
                         We recommend that you use Metamask but any web3 crypto wallet should work. Remember to use Cronos Test network.
@@ -60,7 +60,7 @@ export const Step = () => {
                         <p className="text-lg font-bold leading-5 text-white">Sign in with your wallet</p>
                         <p className="flex items-center justify-center w-6 h-6 font-bold rounded text-deep-purple-accent-400 text-white">
                         </p>
-                        <Image src={"/images/connect.png"} height="64" width="64"/>
+                        <Image alt={"connect step"} src={"/images/connect.png"} height="64" width="64"/>
 
                     </div>
                     <h3 className="text-sm text-gray-400">
@@ -73,10 +73,10 @@ export const Step = () => {
                         <p className="text-lg font-bold leading-5 text-white">Approve in-game tokens</p>
                         <p className="flex items-center justify-center w-6 h-6 font-bold rounded text-deep-purple-accent-400 text-white">
                         </p>
-                        <Image src={"/images/approved.png"} height="64" width="64"/>
+                        <Image alt={"approved step"} src={"/images/approved.png"} height="64" width="64"/>
                     </div>
                     <h3 className="text-sm text-gray-400">
-                        <Link  className='font-bold text-white text-lg'  href='/faucet'><a target='_self' rel='noreferrer' className='font-bold text-gray-200 underline '>Get your in game TUSD tokens. </a></Link>
+                        <Link legacyBehavior className='font-bold text-white text-lg'  href='/faucet'><a target='_self' rel='noreferrer' className='font-bold text-gray-200 underline '>Get your in game TUSD tokens. </a></Link>
                         <br/>
                         Approve TUSD for in-game spending. Approval of tokens will not deduct your funds until play the game.
                     </h3>
@@ -88,7 +88,7 @@ export const Step = () => {
                         <p className="text-lg font-bold leading-5 text-white">Play slot and win</p>
                         <p className="flex items-center justify-center w-6 h-6 font-bold rounded text-deep-purple-accent-400 text-white ">
                         </p>
-                        <Image src={"/images/controller.png"} height="64" width="64"/>
+                        <Image alt={"play cryptogame"} src={"/images/controller.png"} height="64" width="64"/>
                     </div>
                     <h3 className="text-sm text-gray-400">
                         Play the game by pressing the Spin button. Wait a few moments and see what is your win today!
