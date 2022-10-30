@@ -3,7 +3,6 @@ import Head from "next/head";
 import Background from "../components/background/Background";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
-import Image from "next/image";
 import FaucetComp from "../components/faucet/faucet";
 
 class Slot extends Component {
@@ -67,18 +66,6 @@ class Slot extends Component {
             <FaucetComp />
           </main>
           <Footer />
-          <div className="absolute inset-x-0 bottom-0 -z-10 w-full">
-            <div className="relative h-screen w-full lg:h-[120rem]">
-              <Image
-                layout="fill"
-                objectFit="cover"
-                width={100} height={200}
-
-                src={"/images/stellar-bg-2.webp"}
-                alt="stellar bg"
-              />
-            </div>
-          </div>
         </div>
       </>
     );

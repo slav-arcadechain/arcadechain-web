@@ -40,12 +40,12 @@ class Footer extends Component {
                             <div className="flex items-center mx-auto w-fit gap-x-6">
                                 <a href="https://twitter.com/archadechain" title={"twitter"}>
                                     <div className="h-8 w-8 xl:h-20 xl:w-12 relative">
-                                        <Image height={8} width={8} layout="fill" src={"/images/twitter.svg"} alt="twitter" />
+                                        <Image height={80} width={80} layout="fill" src={"/images/twitter.svg"} alt="twitter" />
                                     </div>
                                 </a>
                                 <a href="https://t.me/arcadechain" title={"telegram"}>
                                     <div className="h-8 w-8 xl:h-20 xl:w-12 relative">
-                                        <Image height={8} width={8} layout="fill" src={"/images/telegram.svg"} alt="telegram" />
+                                        <Image height={80} width={80} layout="fill" src={"/images/telegram.svg"} alt="telegram" />
                                     </div>
                                 </a>
                             </div>

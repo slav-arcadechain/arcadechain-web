@@ -1,50 +1,50 @@
-import { useMoralis } from "react-moralis";
-import Image from "next/image";
+import {useMoralis} from "react-moralis";
 
 
-function ERC20({color,chainId,tokenAddress,tokenSymbol,tokenDecimals}) {
-    const {isAuthenticated,authenticate} = useMoralis()
+function ERC20({chainId, tokenAddress, tokenSymbol, tokenDecimals}) {
+    const {isAuthenticated, authenticate} = useMoralis()
     let currentChainId
-      async function switchChain() {
-         await ethereum.request({
+
+    async function switchChain() {
+        await ethereum.request({
             method: 'wallet_switchEthereumChain',
-            params: [{ chainId: chainId }],
+            params: [{chainId: chainId}],
         })
     }
 
-       async function addTUSD() {
-          await ethereum.request({
+    async function addTUSD() {
+        await ethereum.request({
             method: 'wallet_watchAsset',
             params: {
-              type: 'ERC20',
-              options: {
-                address: tokenAddress, 
-                symbol: tokenSymbol, 
-                decimals: tokenDecimals,
-              },
+                type: 'ERC20',
+                options: {
+                    address: tokenAddress,
+                    symbol: tokenSymbol,
+                    decimals: tokenDecimals,
+                },
             },
-          });
+        });
     }
 
-    const addToken = async () => {     
-        if(!isAuthenticated) {
-            await authenticate({signingMessage: "Log in to interact with Arcade Chain" })
-        } 
+    const addToken = async () => {
+        if (!isAuthenticated) {
+            await authenticate({signingMessage: "Log in to interact with Arcade Chain"})
+        }
         currentChainId = await ethereum.request({
             method: 'eth_chainId',
         })
-        if(currentChainId!=chainId) {
-            await switchChain()  
-        } 
+        if (currentChainId != chainId) {
+            await switchChain()
+        }
         await addTUSD()
     }
-        return(
-            <>
-                        <button onClick={addToken} className={`relative h-10 w-32 font-poppins text-sm font-bold text-${color} md:h-[54px] md:w-[180px] md:text-base`} >
-                            <p className="relative z-20">Add TUSD to Metamask</p>        
-                            {/*<Image layout="fill" className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="button gradient" />*/}
-                        </button>
-            </>       
+    return (
+        <>
+            <button onClick={addToken}
+                    className={`bg-gradient-to-r from-purple-600 to-pink-500 focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900`}>
+                <p className="relative z-20">Add {tokenSymbol} to <br/> Metamask</p>
+            </button>
+        </>
     )
 }
 
