@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import ERC20 from "../elements/ERC20"
 import Network from "../elements/Network";
 
@@ -8,17 +7,14 @@ const FaucetComp = () => {
 
     return (
         <>
-
-            <section
-                className="max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
-                <div className="md:flex md:items-center justify-center">
+            <section className="max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
+                <div className="mt-8 md:items-center justify-center">
                     <div className="px-6 py-6 md:px-8 md:py-0">
                         <div data-netlify-recaptcha="true"></div>
-
-                        <h2 className="text-lg font-bold text-gray-700 dark:text-white md:text-gray-100 justify-center">Request your test game tokens.
+                        <h2 className="text-2xl font-bold text-gray-200 dark:text-white ">Request your test game tokens.
                         </h2>
 
-                        <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 md:text-gray-400">Enter your wallet address and we will send you some TUSD tokens. Be patience this might take a little while.</p>
+                        <p className="mt-2 mb-3 text-gray-600">Enter your wallet address and we will send you some TUSD tokens. Be patience this might take a little while.</p>
                     </div>
                 </div>
 
@@ -28,7 +24,7 @@ const FaucetComp = () => {
                               method="POST"
                               action="/thank-you"
                               data-netlify="true">
-                            <input type="hidden" name="form-name" value="faucet"/>
+                            <input type="hidden" name="form-name" value="faucet-polygon"/>
                             <div className="flex flex-col p-1.5 overflow-hidden border rounded-lg dark:border-gray-600 lg:flex-row dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
                                 <input
                                     className="px-4 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none dark:bg-gray-800 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent"
@@ -51,9 +47,7 @@ const FaucetComp = () => {
                               method="POST"
                               action="/thank-you"
                               data-netlify="true">
-                            <input type="hidden" name="form-name" value="faucet"/>
-
-
+                            <input type="hidden" name="form-name" value="faucet-binance"/>
                             <div className="flex flex-col p-1.5 overflow-hidden border rounded-lg dark:border-gray-600 lg:flex-row dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
                                 <input
                                     className="px-4 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none dark:bg-gray-800 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent"

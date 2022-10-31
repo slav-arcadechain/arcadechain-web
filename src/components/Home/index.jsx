@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { component } from "react";
+import React from "react";
 
 const HomeComp = () => {
     return (
@@ -143,7 +143,6 @@ const HomeComp = () => {
                 <div className="absolute inset-x-0 top-0 w-full -z-10 lg:bottom-0">
                     <Image
                         layout="fill"
-                        objectFit="contain"
                         width={3000} height={5}
                         src={"/images/3d-space-scene.webp"} alt="space scene" />
                 </div>
@@ -159,7 +158,6 @@ const HomeComp = () => {
                         <div className="relative col-span-full row-span-full aspect-square">
                             <Image
                                 layout="fill"
-                                objectFit="contain"
                                 width={750} height={20}
                                 src={"/images/round-chart-2.webp"} alt="round chart" />
                         </div>

@@ -43,7 +43,6 @@ const Home = () => {
                     <div className='relative h-screen lg:h-[120rem] w-full'>
                         <Image
                             layout='fill'
-                            objectFit='cover'
                             width={3000} height={200}
                             src={'/images/stellar-bg-2.webp'}
                             alt="stellar bg"
