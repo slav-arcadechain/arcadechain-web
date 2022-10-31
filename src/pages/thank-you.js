@@ -48,7 +48,8 @@ class ThankYou extends Component {
                         <div className='relative h-screen lg:h-[120rem] w-full'>
                             <Image
                                 layout='fill'
-                                objectFit='cover'
+                                width={100} height={200}
+
                                 src={'/images/stellar-bg-2.webp'}
                                 alt="stellar bg"
                             />
