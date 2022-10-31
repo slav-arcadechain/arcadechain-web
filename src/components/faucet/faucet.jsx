@@ -100,14 +100,14 @@ const FaucetComp = () => {
                         </p>
                         <div className="grid grid-cols-2 mt-2 md:ml-40 ">
                             <div className={"ml-5"}>
-                                <Network color="black" chainId='0x152' chainName="Binance Testnet"
-                                         rpcUrls="https://cronos-testnet-3.crypto.org:8545"
-                                         nameOfNativeCurrency="TCRO"
-                                         blockExplorerUrls="https://cronos.crypto.org/explorer/testnet3"/>
+                                <Network color="black" chainId='0x61' chainName="Binance Testnet"
+                                         rpcUrls="https://data-seed-prebsc-1-s3.binance.org:8545"
+                                         nameOfNativeCurrency="TBNB"
+                                         blockExplorerUrls="https://testnet.bscscan.com"/>
                             </div>
                             <div>
                                 <ERC20 color="black" chainId='0x152'
-                                       tokenAddress='0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e'
+                                       tokenAddress='0x0A80797c23971590342edb9AEc08E713D31D63f1'
                                        tokenSymbol='TUSD' tokenDecimals={18}/>
                             </div>
                         </div>
