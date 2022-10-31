@@ -21,7 +21,7 @@
   "scripts": {
     "lint": "next lint",
     "dev": "next dev",
-    "build": "next build",
+    "build": "CI='' next build",
     "start": "next start",
     "watch:css": "npx tailwindcss --postcss -i src/tailwind.css -o src/style.css --watch"
   },
