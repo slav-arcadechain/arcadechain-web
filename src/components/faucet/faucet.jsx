@@ -140,7 +140,7 @@ const FaucetComp = (props) => {
                                          blockExplorerUrls="https://testnet.bscscan.com"/>
                             </div>
                             <div>
-                                <ERC20 color="black" chainId='0x152'
+                                <ERC20 color="black" chainId='0x61'
                                        tokenAddress='0x0A80797c23971590342edb9AEc08E713D31D63f1'
                                        tokenSymbol='TUSD' tokenDecimals={18}/>
                             </div>
