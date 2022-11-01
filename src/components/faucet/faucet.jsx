@@ -28,6 +28,7 @@ const FaucetComp = (props) => {
             wallet: wallet
         };
         props.onFaucetRequest(faucetRequestData)
+        walletAddressBinance.current.value = '';
     }
 
     return (
