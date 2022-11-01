@@ -1,12 +1,23 @@
-import React, { Component } from "react";
+import React from "react";
 import Head from "next/head";
 import Background from "../components/background/Background";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import FaucetComp from "../components/faucet/faucet";
 
-class Slot extends Component {
-  render() {
+function sendFaucetRequest(data){
+    fetch('https://us-central1-archadechain-faucet.cloudfunctions.net/faucet',
+      {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+  );
+}
+
+function Faucet(){
     return (
       <>
         <div className="relative overflow-hidden">
@@ -63,13 +74,12 @@ class Slot extends Component {
           <Header />
 
           <main className="mx-auto mt-16 max-w-container px-4 sm:mt-24 sm:px-10 3xl:px-0">
-            <FaucetComp />
+            <FaucetComp onFaucetRequest={sendFaucetRequest}/>
           </main>
           <Footer />
         </div>
       </>
     );
-  }
 }
 
-export default Slot;
+export default Faucet;
