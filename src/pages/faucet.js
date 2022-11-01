@@ -4,6 +4,8 @@ import Background from "../components/background/Background";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import FaucetComp from "../components/faucet/faucet";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function sendFaucetRequest(data){
     fetch('https://us-central1-archadechain-faucet.cloudfunctions.net/faucet',
@@ -14,7 +16,30 @@ function sendFaucetRequest(data){
           'Content-Type': 'application/json'
         }
       }
-  );
+  ).then((response) => {
+        console.log("boom I'm in then : " + response)
+        toast.success('Your wallet has been credited', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        });
+    }).catch(e => {
+        toast.error('Error has occurred. Please try again later.', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        });
+    });
 }
 
 function Faucet(){
@@ -74,6 +99,18 @@ function Faucet(){
           <Header />
 
           <main className="mx-auto mt-16 max-w-container px-4 sm:mt-24 sm:px-10 3xl:px-0">
+              <ToastContainer
+                  position="top-center"
+                  autoClose={5000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                  theme="colored"
+              />
             <FaucetComp onFaucetRequest={sendFaucetRequest}/>
           </main>
           <Footer />
