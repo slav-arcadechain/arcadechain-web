@@ -11,8 +11,7 @@ const HomeComp = () => {
             </div>
             <div className="text-center pt-20" id={'header-text'}>
                 <h1 className="font-bold tracking-tight text-white text-3xl md:text-5xl lg:text-7xl">
-                    <span
-                        className="block text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Crypto games, initial coin offering and pre-sale</span>
+                    <span className="block text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">Crypto games, initial coin offering and pre-sale</span>
                 </h1>
 
                 <div className="flex justify-center max-w-md mx-auto mt-8 gap-x-6 md:mt-14 md:gap-x-10">
@@ -22,13 +21,6 @@ const HomeComp = () => {
                             <span className="relative z-20">Learn More</span>
                         </a>
                     </button>
-
-                    {/*<button*/}
-                    {/*    className="relative h-10 w-32 font-poppins text-sm font-bold text-white md:h-[54px] md:w-[180px] md:text-base">*/}
-
-                    {/*    /!*<Image layout="fill" className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="button gradient" />*!/*/}
-
-                    {/*</button>*/}
                 </div>
             </div>
 
