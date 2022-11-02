@@ -21,7 +21,7 @@ export const Step = () => {
                         <Image alt={"wallet step"} src={"/images/wallet.png"} height="64" width="64"/>
                     </div>
                     <h3 className="text-sm text-gray-400">
-                        We recommend that you use Metamask but any web3 crypto wallet should work. Remember to use Cronos Test network.
+                        We recommend that you use Metamask but any web3 crypto wallet should work. Remember to use Binance or Polygon Test network.
                     </h3>
                 </div>
                 <div

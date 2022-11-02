@@ -23,7 +23,7 @@ function Switchere() {
 
     }, []);
 
-    return <div id="switchere" className={'h-40'}></div>
+    return <div id="switchere" className={'h-40 mb-20'}></div>
 }
 
 export default Switchere;

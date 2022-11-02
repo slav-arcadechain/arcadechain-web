@@ -4,7 +4,6 @@ import Background from "../components/background/Background";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Image from "next/image";
-import {ThankYouComp} from "../components/elements/Thanks";
 
 function NotFound() {
     return (
@@ -42,12 +41,13 @@ function NotFound() {
                     <div className="grid place-items-center mt-40 mb-80 pb-20">
                         <div className="w-full max-w-sm px-4 py-3 bg-white rounded-md shadow-md dark:bg-gray-800">
                             <div className="flex items-center justify-between">
-                                <span className="text-sm text-gray-800 dark:text-gray-400 font-bold">404 - Not Found.</span>
+                                <span
+                                    className="text-sm text-gray-800 dark:text-gray-400 font-bold">404 - Not Found.</span>
                             </div>
 
                             <div>
                                 <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-                                   The page you are looking for does not exist.
+                                    The page you are looking for does not exist.
                                 </p>
 
                             </div>
