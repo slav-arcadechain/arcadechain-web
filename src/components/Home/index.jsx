@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { component } from "react";
+import React from "react";
 
 const HomeComp = () => {
     return (
@@ -16,14 +16,19 @@ const HomeComp = () => {
                 </h1>
 
                 <div className="flex justify-center max-w-md mx-auto mt-8 gap-x-6 md:mt-14 md:gap-x-10">
-                    <button
-                        className="relative h-10 w-32 font-poppins text-sm font-bold text-white md:h-[54px] md:w-[180px] md:text-base">
+                    <button type="button"
+                            className="bg-gradient-to-r from-purple-600 to-pink-500 focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-9 py-5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
                         <a href='#roadmap' title={"roadmap"}>
                             <span className="relative z-20">Learn More</span>
                         </a>
-                        <Image layout="fill" className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="button gradient" />
-
                     </button>
+
+                    {/*<button*/}
+                    {/*    className="relative h-10 w-32 font-poppins text-sm font-bold text-white md:h-[54px] md:w-[180px] md:text-base">*/}
+
+                    {/*    /!*<Image layout="fill" className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="button gradient" />*!/*/}
+
+                    {/*</button>*/}
                 </div>
             </div>
 
@@ -34,7 +39,7 @@ const HomeComp = () => {
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                         <div className="relative h-11 w-11 xl:h-20 xl:w-20">
-                            <Image layout="fill" src={"/images/002_joystick.svg"}
+                            <Image width={80} height={80} src={"/images/002_joystick.svg"}
                                 alt="joystick" />
                         </div>
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Entertaining</p>
@@ -46,8 +51,7 @@ const HomeComp = () => {
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                         <div className="relative h-11 w-11 xl:h-20 xl:w-20">
-                            <Image layout="fill" src={"/images/005_wallet.svg"}
-                                alt="wallet" />
+                            <Image width={80} height={80} src={"/images/005_wallet.svg"} alt="wallet" />
                         </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Passive income</p>
@@ -61,7 +65,7 @@ const HomeComp = () => {
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                         <div className="relative h-11 w-11 xl:h-20 xl:w-20">
-                            <Image layout="fill" src={"/images/007_point.svg"} alt="point" />
+                            <Image width={80} height={80} src={"/images/007_point.svg"} alt="point" />
                         </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Play-to-Earn</p>
@@ -75,8 +79,7 @@ const HomeComp = () => {
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                         <div className="relative h-11 w-11 xl:h-20 xl:w-20">
-                            <Image layout="fill" src={"/images/004_dollar.svg"}
-                                alt="dollar" />
+                            <Image width={80} height={80} src={"/images/004_dollar.svg"} alt="dollar" />
                         </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Stable coin</p>
@@ -87,8 +90,7 @@ const HomeComp = () => {
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                         <div className="relative h-11 w-11 xl:h-20 xl:w-20">
-                            <Image layout="fill" src={"/images/003_happy.svg"}
-                                alt="happy" />
+                            <Image width={80} height={80} src={"/images/003_happy.svg"} alt="happy" />
                         </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Community driven</p>
@@ -101,8 +103,7 @@ const HomeComp = () => {
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                         <div className="relative h-11 w-11 xl:h-20 xl:w-20">
-                            <Image layout="fill" src={"/images/001_blockchain.svg"}
-                                alt="blockchain" />
+                            <Image width={80} height={80} src={"/images/001_blockchain.svg"} alt="blockchain" />
                         </div>
 
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Multi and Cross-chain</p>
@@ -119,7 +120,7 @@ const HomeComp = () => {
                     <h2 className="text-xl font-bold md:text-4xl text-white">Initial coin offering and token pre-sale</h2>
 
                     <p className="mt-2 text-left text-gray-400 md:mt-10 xl:text-2xl">
-                        Our goal is to have the initial coin offering in the quarter four of 2022 followed by public sale and CEX listing in early 2023. <br />
+                        Our goal is to have the initial coin offering as soon as the market conditions are right. This will be followed by public sale and CEX listing approximately 6 months later. <br />
                         The pre-sale will be open to everyone willing to participate with a cap of $5000 per person. Token price will be set to $0.01 per ACT. <br />
                         The pre-sale is capped at 5% of total supply (please see tokenomics below).
                     </p>
@@ -127,27 +128,26 @@ const HomeComp = () => {
                 </div>
 
                 <Image
-                    src={"/images/arcade-machine.png"} alt="arcade machine"
+                    src={"/images/ACT_token.png"} alt="arcade machine"
                     srcSet="images/arcade-machine@2x 2x.png"
-                    width="257" height="404" />
+                    width="230" height="230" />
             </div>
 
-            <div className="relative fullbleed">
-                <div id='roadmap' className="px-4 pb-8 mx-auto mt-10 space-y-6 max-w-container sm:px-10 md:mt-26 md:space-y-30 3xl:px-0">
+            <div className="relative fullbleed mb-30">
+                <div id='roadmap' className="px-4 pb-1 mx-auto mt-10 space-y-6 max-w-container sm:px-10 md:mt-26 md:space-y-30 3xl:px-0">
                     <h2 className="text-xl font-bold text-center md:text-5xl text-white">Roadmap</h2>
-                    <div className="w-full aspect-square relative">
-                        <Image layout="fill" src={"/images/roadmap.svg"} alt="roadmap" />
+                    <div className="w-full relative">
+                        <Image width={1440} height={400} src={"/images/roadmap_transparent.png"} alt="roadmap" />
                     </div>
                 </div>
                 <div className="absolute inset-x-0 top-0 w-full -z-10 lg:bottom-0">
                     <Image
-                        layout="fill"
-                        objectFit="contain"
+                        width={3000} height={5}
                         src={"/images/3d-space-scene.webp"} alt="space scene" />
                 </div>
             </div>
 
-            <div id="tokenomics" className="mt-10 sm:pb-22 md:mt-61">
+            <div id="tokenomics" className="mt-10 sm:pb-22 md:mt-1">
                 <h2 className="text-xl font-bold text-center md:text-5xl text-white">Tokenomics</h2>
 
                 <div
@@ -156,8 +156,7 @@ const HomeComp = () => {
                         className="mx-auto grid w-full max-w-[471px] pb-10 lg:mx-0 xl:max-w-[541px] 2xl:max-w-[701px] 3xl:max-w-[741px]">
                         <div className="relative col-span-full row-span-full aspect-square">
                             <Image
-                                layout="fill"
-                                objectFit="contain"
+                                width={750} height={20}
                                 src={"/images/round-chart-2.webp"} alt="round chart" />
                         </div>
                     </div>
@@ -168,12 +167,13 @@ const HomeComp = () => {
 
                             <div className="-top-px absolute -left-5 sm:left-[-52px]">
                                 <div className="relative w-[175px] h-[98px]">
-                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="bar edge left" />
+
+                                    <Image width={175} height={98} src={"/images/bar-edge-left.svg"} alt="bar edge left" />
                                 </div>
                             </div>
                             <div className="absolute -top-px -right-5 sm:right-[-52px]">
                                 <div className="relative w-[88px] h-[98px]">
-                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="bar edge right" />
+                                    <Image width={88} height={98} src={"/images/bar-edge-right.svg"} alt="bar edge right" />
                                 </div>
                             </div>
 
@@ -201,13 +201,13 @@ const HomeComp = () => {
 
                             <div className="-top-px absolute -left-5 sm:left-[-52px]">
                                 <div className="relative w-[175px] h-[98px]">
-                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="bar edge left" />
+                                    <Image width={175} height={98} src={"/images/bar-edge-left.svg"} alt="bar edge left" />
                                 </div>
                             </div>
 
                             <div className="absolute -top-px -right-5 sm:right-[-52px]">
                                 <div className="relative w-[88px] h-[98px]">
-                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="bar edge right" />
+                                    <Image width={88} height={98} src={"/images/bar-edge-right.svg"} alt="bar edge right" />
                                 </div>
                             </div>
 
@@ -234,12 +234,12 @@ const HomeComp = () => {
 
                             <div className="-top-px absolute -left-5 sm:left-[-52px]">
                                 <div className="relative w-[175px] h-[98px]">
-                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="bar edge left" />
+                                    <Image width={175} height={98} src={"/images/bar-edge-left.svg"} alt="bar edge left" />
                                 </div>
                             </div>
                             <div className="absolute -top-px -right-5 sm:right-[-52px]">
                                 <div className="relative w-[88px] h-[98px]">
-                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="bar edge right" />
+                                    <Image width={88} height={98} src={"/images/bar-edge-right.svg"} alt="bar edge right" />
                                 </div>
                             </div>
 
@@ -266,12 +266,12 @@ const HomeComp = () => {
 
                             <div className="-top-px absolute -left-5 sm:left-[-52px]">
                                 <div className="relative w-[175px] h-[98px]">
-                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="bar edge left" />
+                                    <Image width={175} height={98} src={"/images/bar-edge-left.svg"} alt="bar edge left" />
                                 </div>
                             </div>
                             <div className="absolute -top-px -right-5 sm:right-[-52px]">
                                 <div className="relative w-[88px] h-[98px]">
-                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="bar edge right" />
+                                    <Image  width={88} height={98} src={"/images/bar-edge-right.svg"} alt="bar edge right" />
                                 </div>
                             </div>
                             <div className="relative z-20">
@@ -297,12 +297,12 @@ const HomeComp = () => {
 
                             <div className="-top-px absolute -left-5 sm:left-[-52px]">
                                 <div className="relative w-[175px] h-[98px]">
-                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="bar edge left" />
+                                    <Image width={175} height={98} src={"/images/bar-edge-left.svg"} alt="bar edge left" />
                                 </div>
                             </div>
                             <div className="absolute -top-px -right-5 sm:right-[-52px]">
                                 <div className="relative w-[88px] h-[98px]">
-                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="bar edge right" />
+                                    <Image width={88} height={98} src={"/images/bar-edge-right.svg"} alt="bar edge right" />
                                 </div>
                             </div>
                             <div className="relative z-20">
@@ -328,12 +328,12 @@ const HomeComp = () => {
 
                             <div className="-top-px absolute -left-5 sm:left-[-52px]">
                                 <div className="relative w-[175px] h-[98px]">
-                                    <Image src={"/images/bar-edge-left.svg"} layout='fill' alt="bar edge left" />
+                                    <Image width={175} height={98} src={"/images/bar-edge-left.svg"} alt="bar edge left" />
                                 </div>
                             </div>
                             <div className="absolute -top-px -right-5 sm:right-[-52px]">
                                 <div className="relative w-[88px] h-[98px]">
-                                    <Image src={"/images/bar-edge-right.svg"} layout='fill' alt="bar edge right" />
+                                    <Image width={88} height={98} src={"/images/bar-edge-right.svg"} alt="bar edge right" />
                                 </div>
                             </div>
                             <div className="relative z-20">

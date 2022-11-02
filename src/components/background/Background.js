@@ -11,7 +11,9 @@ class Background extends Component {
                             alt="hero-bg" />
                     </picture>
                     <picture>
-                        <img className="object-contain w-full" src={"/images/stellar-bg-2.webp"} alt="stellar-bg-2" />
+                        <img className="object-contain w-full"
+                             width={3000} height={200}
+                             src={"/images/stellar-bg-2.webp"} alt="stellar-bg-2" />
                     </picture>
                 </div>
             </>
