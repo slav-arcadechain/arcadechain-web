@@ -9,19 +9,18 @@ const Header = () => {
                 <div className="flex h-19 items-center justify-between px-2 md:h-22.5 md:px-0">
                     <div className="flex items-center gap-10 md:w-full md:justify-between">
 
-                        <Link legacyBehavior href='/'>
-                            <a
+                        <Link legacyBehavior href='/'
                                 className="relative z-50 pt-10 flex flex-col items-center gap-2 whitespace-nowrap sm:flex-row md:gap-4" title={"Arcade Chain"}>
                                 <picture>
                                     <img className="pt-10" src={"/images/arcade_chain.svg"} width="256" height="256" alt="arcade chain" />
                                 </picture>
-                            </a>
                         </Link>
                         <nav id="primary-nav"
                             className={`fixed inset-0 flex flex-col items-center text-xl duration-200 ease-in-out ${showSidebar ? 'translate-x-0' : 'translate-x-full'} z-90 gap-7 bg-slate-900/80 pt-28 backdrop-blur md:left-1/2 xl:static xl:translate-x-0 xl:flex-row xl:items-center xl:gap-6 xl:bg-transparent xl:px-0 xl:pt-0 xl:text-base`}>
-                            <Link legacyBehavior className='font-bold text-white text-lg'  href='/slot'><a target='_self' rel='noreferrer' className='font-bold text-white text-lg'>Play Slot (Beta)</a></Link>
-                            <Link legacyBehavior className='font-bold text-white text-lg'  href='/faucet'><a target='_self' rel='noreferrer' className='font-bold text-white text-lg'>TUSD faucet</a></Link>
-                            <Link legacyBehavior href='/arcade_chain_whitepaper.pdf'><a target='_blank' rel='noreferrer' className='font-bold text-white text-lg'>White Paper</a></Link>
+                            <Link href='/slot' className='font-bold text-white text-lg'>Play Slot (Beta)</Link>
+                            <Link href='/faucet' className='font-bold text-white text-lg'>TUSD faucet</Link>
+                            <Link href='/get-act-token' className='font-bold text-white text-lg'>Get ACT</Link>
+                            <Link href='/arcade_chain_whitepaper.pdf' className='font-bold text-white text-lg'>White Paper</Link>
                         </nav>
                     </div>
 

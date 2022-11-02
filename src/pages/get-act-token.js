@@ -4,8 +4,29 @@ import Background from "../components/background/Background";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Image from "next/image";
+import IntroText from "../components/elements/IntroText";
+import Switchere from "../components/switchere/Switchere";
+import path from "path";
+import fs from "fs/promises";
+import {SwapWidget} from "@uniswap/widgets";
 
-function NotFound() {
+function GetActToken(props) {
+
+    const UNISWAP_TOKEN_LIST = props.uniswapData;
+    const MATIC = '0x0000000000000000000000000000000000001010'
+    const TUSD  = '0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e'
+    const theme = {
+        borderRadius: 0.5,
+        fontFamily: '"Helvetica"',
+        container: "#1b2654",
+        module: "#0c1739",
+        dialog: "#0c1739",
+        primary: "#ffffff",
+        interactive: "#4d4f78",
+        accent: '#2da245',
+
+    }
+
     return (
         <>
             <div className="relative overflow-hidden">
@@ -38,21 +59,26 @@ function NotFound() {
                 <Background/>
                 <Header/>
                 <main className="mx-auto mt-16 max-w-container px-4 sm:mt-24 sm:px-10 3xl:px-0">
-                    <div className="grid place-items-center mt-40 mb-80 pb-20">
-                        <div className="w-full max-w-sm px-4 py-3 bg-white rounded-md shadow-md dark:bg-gray-800">
-                            <div className="flex items-center justify-between">
-                                <span
-                                    className="text-sm text-gray-800 dark:text-gray-400 font-bold">404 - Not Found.</span>
-                            </div>
+                  <div className={"grid place-items-center"}>
+                    <IntroText leadText={['1. ', 'Exchange your money for crypto.']}
+                               followText={'For your convenience you are now able to convert your fiat currency to crypto tokens of your choice using wide range of payment methods including payment card and bank transfers.'}/>
+                    <Switchere/>
+                    <IntroText style={'mt-52'} leadText={['2. ', 'Swap your crypto for ACT token.']}
+                               followText={'It\'s easier then ever to swap crypto you own for our ACT token, directly from our platform.'}/>
 
-                            <div>
-                                <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-                                    The page you are looking for does not exist.
-                                </p>
-
-                            </div>
-                        </div>
+                    <div className="Uniswap">
+                        <SwapWidget
+                            width={505}
+                            theme={theme}
+                            tokenList={UNISWAP_TOKEN_LIST}
+                            defaultInputTokenAddress={MATIC}
+                            defaultInputAmount={0.1}
+                            hideConnectionUI={true}
+                            defaultChainId={80001}
+                            defaultOutputTokenAddress={TUSD}
+                        />
                     </div>
+                </div>
                 </main>
                 <Footer/>
                 <div className='absolute inset-x-0 bottom-0 -z-10 w-full'>
@@ -69,4 +95,17 @@ function NotFound() {
     );
 }
 
-export default NotFound;
+export async function getStaticProps(context) {
+    const filePath = path.join(process.cwd(), 'data', "tokens-uniswap.json");
+    const jsonData = await fs.readFile(filePath);
+    const data = JSON.parse(jsonData);
+
+
+    return {
+        props: {
+            "uniswapData": data
+        }
+    }
+}
+
+export default GetActToken;
