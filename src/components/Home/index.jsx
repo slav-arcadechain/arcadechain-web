@@ -31,8 +31,7 @@ const HomeComp = () => {
                     <div
                         className="p-4 space-y-2 rounded-2xl bg-slate-800/40 drop-shadow-white-xl backdrop-blur-sm md:space-y-4 md:p-10">
                         <div className="relative h-11 w-11 xl:h-20 xl:w-20">
-                            <Image width={80} height={80} src={"/images/002_joystick.svg"}
-                                alt="joystick" />
+                            <Image width={80} height={80} src={"/images/002_joystick.svg"} alt="joystick" />
                         </div>
                         <p className="text-sm font-bold md:text-xl xl:text-2xl text-white">Entertaining</p>
                         <p className="text-base text-gray-400 xl:text-xl">

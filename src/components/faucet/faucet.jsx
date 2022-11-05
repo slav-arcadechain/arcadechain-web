@@ -1,6 +1,7 @@
 import React, {useRef} from "react";
-import ERC20 from "../elements/ERC20"
-import Network from "../elements/Network";
+// import ERC20 from "../elements/ERC20"
+import AddChainToWallet from "../elements/AddChainToWallet";
+import AddTokenToWallet from "../elements/AddTokenToWallet";
 
 const FaucetComp = (props) => {
     const chainNamePolygon = useRef();
@@ -108,16 +109,20 @@ const FaucetComp = (props) => {
                             blockchain functionality prior to production releases.
                         </p>
                         <div className="grid grid-cols-2 mt-2 md:ml-40 ">
-                            <div className={"ml-5 "}>
-                                <Network chainId='0x13881' chainName="Polygon Testnet"
-                                         rpcUrls="https://rpc-mumbai.maticvigil.com/v1/c542596d3086e52602d4c9d913d1c6f709639f08"
-                                         nameOfNativeCurrency="MATIC"
-                                         blockExplorerUrls="https://mumbai.polygonscan.com/"/>
+                            <div className={"ml-5"}>
+                                <AddChainToWallet chainId='0x13881'
+                                                  chainName="Mumbai"
+                                                  chainDisplayName="Polygon Test"
+                                                  rpcUrls="https://rpc-mumbai.maticvigil.com/v1/c542596d3086e52602d4c9d913d1c6f709639f08"
+                                                  nameOfNativeCurrency="MATIC"
+                                                  blockExplorerUrls="https://mumbai.polygonscan.com/"/>
                             </div>
                             <div>
-                                <ERC20 chainId='0x13881'
-                                       tokenAddress='0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e'
-                                       tokenSymbol='TUSD' tokenDecimals={18}/>
+                                <AddTokenToWallet  chainId='0x13881'
+                                                   chainName="Mumbai"
+                                                   tokenAddress='0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e'
+                                                   tokenSymbol='TUSD'
+                                                   tokenDecimals={18}/>
                             </div>
                         </div>
                     </div>
@@ -134,15 +139,19 @@ const FaucetComp = (props) => {
                         </p>
                         <div className="grid grid-cols-2 mt-2 md:ml-40 ">
                             <div className={"ml-5"}>
-                                <Network color="black" chainId='0x61' chainName="Binance Testnet"
-                                         rpcUrls="https://data-seed-prebsc-1-s3.binance.org:8545"
-                                         nameOfNativeCurrency="TBNB"
-                                         blockExplorerUrls="https://testnet.bscscan.com"/>
+                                <AddChainToWallet chainId='0x61'
+                                                  chainDisplayName="Binance Test"
+                                                  chainName="Binance Smart Chain Testnet"
+                                                  rpcUrls="https://data-seed-prebsc-1-s3.binance.org:8545"
+                                                  nameOfNativeCurrency="tBNB"
+                                                  blockExplorerUrls="https://testnet.bscscan.com"/>
                             </div>
                             <div>
-                                <ERC20 color="black" chainId='0x61'
-                                       tokenAddress='0x0A80797c23971590342edb9AEc08E713D31D63f1'
-                                       tokenSymbol='TUSD' tokenDecimals={18}/>
+                                <AddTokenToWallet  chainId='0x61'
+                                                   chainName="Binance Test"
+                                                   tokenAddress='0x0A80797c23971590342edb9AEc08E713D31D63f1'
+                                                   tokenSymbol='TUSD'
+                                                   tokenDecimals={18}/>
                             </div>
                         </div>
                     </div>

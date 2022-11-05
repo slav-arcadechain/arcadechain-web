@@ -1,5 +1,5 @@
-import ERC20 from "../elements/ERC20"
-import Network from "../elements/Network";
+import AddTokenToWallet from "./AddTokenToWallet"
+import AddChainToWallet from "./AddChainToWallet";
 import React from "react";
 export const ThankYouComp = () => {
     return (
@@ -24,15 +24,15 @@ export const ThankYouComp = () => {
                         </p>
                         <div className="grid grid-cols-2 mt-2 md:ml-40 ">
                             <div className={"ml-5 "}>
-                                <Network chainId='0x13881' chainName="Polygon Testnet"
-                                         rpcUrls="https://rpc-mumbai.maticvigil.com/v1/c542596d3086e52602d4c9d913d1c6f709639f08"
-                                         nameOfNativeCurrency="MATIC"
-                                         blockExplorerUrls="https://mumbai.polygonscan.com/"/>
+                                <AddChainToWallet chainId='0x13881' chainName="Mumbai"
+                                                  rpcUrls="https://rpc-mumbai.maticvigil.com/v1/c542596d3086e52602d4c9d913d1c6f709639f08"
+                                                  nameOfNativeCurrency="MATIC"
+                                                  blockExplorerUrls="https://mumbai.polygonscan.com/"/>
                             </div>
                             <div>
-                                <ERC20 chainId='0x13881'
-                                       tokenAddress='0x0F4c292a373922661b98E46F3dedB3D8f424b31E'
-                                       tokenSymbol='TUSD' tokenDecimals={18}/>
+                                <AddTokenToWallet chainId='0x13881'
+                                                  tokenAddress='0x0F4c292a373922661b98E46F3dedB3D8f424b31E'
+                                                  tokenSymbol='TUSD' tokenDecimals={18}/>
                             </div>
                         </div>
                     </div>
@@ -47,15 +47,15 @@ export const ThankYouComp = () => {
                         </p>
                         <div className="grid grid-cols-2 mt-2 md:ml-40 ">
                             <div className={"ml-5"}>
-                                <Network color="black" chainId='0x61' chainName="Binance Testnet"
-                                         rpcUrls="https://data-seed-prebsc-1-s3.binance.org:8545"
-                                         nameOfNativeCurrency="TBNB"
-                                         blockExplorerUrls="https://testnet.bscscan.com"/>
+                                <AddChainToWallet color="black" chainId='0x61' chainName="Binance Testnet"
+                                                  rpcUrls="https://data-seed-prebsc-1-s3.binance.org:8545"
+                                                  nameOfNativeCurrency="TBNB"
+                                                  blockExplorerUrls="https://testnet.bscscan.com"/>
                             </div>
                             <div>
-                                <ERC20 color="black" chainId='0x61'
-                                       tokenAddress='0x0A80797c23971590342edb9AEc08E713D31D63f1'
-                                       tokenSymbol='TUSD' tokenDecimals={18}/>
+                                <AddTokenToWallet color="black" chainId='0x61'
+                                                  tokenAddress='0x0A80797c23971590342edb9AEc08E713D31D63f1'
+                                                  tokenSymbol='TUSD' tokenDecimals={18}/>
                             </div>
                         </div>
                     </div>

@@ -16,7 +16,6 @@ function sendFaucetRequest(data) {
                 }
             }
         ).then((response) => {
-            console.log("in success")
             toast.success('Your wallet has been credited', {
                 position: "top-center",
                 autoClose: 5000,
@@ -28,7 +27,6 @@ function sendFaucetRequest(data) {
                 theme: "dark",
             });
         }).catch(e => {
-            console.log('in error')
             toast.error('Error cannot transfer tokens. Please try again later.', {
                 position: "top-center",
                 autoClose: 5000,
