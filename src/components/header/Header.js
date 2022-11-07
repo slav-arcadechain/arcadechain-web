@@ -24,7 +24,7 @@ const Header = () => {
                             <Link href='/faucet' className='font-bold text-white text-lg'>TUSD faucet</Link>
                             <Link href='/get-act-token' className='font-bold text-white text-lg'>Get ACT</Link>
                             <Link href='/arcade_chain_whitepaper.pdf' className='font-bold text-white text-lg'>White Paper</Link>
-                            {/*<Link href="/rewards" className="text-lg font-bold text-white">Rewards</Link>*/}
+                            <Link href="/rewards" className="text-lg font-bold text-white">Rewards</Link>
                             <ConnectButton/>
                         </nav>
                     </div>

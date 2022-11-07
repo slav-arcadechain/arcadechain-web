@@ -1,10 +1,10 @@
 import {useNetwork, useSwitchNetwork} from "wagmi";
-import {addChain, addToken} from "../../utils/web3";
+import {addToken} from "../../utils/web3";
 import {toast} from "react-toastify";
 
 
 function AddTokenToWallet({chainId, chainName, tokenAddress, tokenSymbol, tokenDecimals}) {
-    const { chain, chains } = useNetwork();
+    const {chain, chains} = useNetwork();
     const {switchNetwork} = useSwitchNetwork({
         chainId: chainId
     })
@@ -14,7 +14,7 @@ function AddTokenToWallet({chainId, chainName, tokenAddress, tokenSymbol, tokenD
         const chainIdDecimal = parseInt(chainId, 16);
 
         if (!chain || chain.id !== chainIdDecimal) {
-            toast.warn(`Please connect your wallet and change to ${chainName} network before adding the token` )
+            toast.warn(`Please connect your wallet and change to ${chainName} network before adding the token`)
         } else {
             await addToken(tokenAddress, tokenSymbol, tokenDecimals)
         }
