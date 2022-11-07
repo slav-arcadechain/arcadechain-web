@@ -150,20 +150,6 @@ function ActHoldings() {
         gameStepIcon = <FaTimesCircle style ={pendingStyle} />
     }
 
-    const { fetch } = useMoralisQuery(
-        "Monster",
-        (query) => query.select("strength", "ownerName"),
-        [],
-        { autoFetch: false }
-    );
-
-    const getSelectedQuery = () =>
-        fetch({
-            onSuccess: (monster) => {
-                // each of the monsters will only have the selected fields available.
-            },
-        });
-
     return (
         <>
             <div className="grid grid-cols-7">
