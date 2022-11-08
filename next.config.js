@@ -8,6 +8,8 @@ const moduleExports = {
   },
   sentry: {
     hideSourceMaps: true
+  }, env: {
+    COVALENT_API_KEY: process.env.COVALENT_API_KEY
   }
 };
 

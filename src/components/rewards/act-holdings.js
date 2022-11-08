@@ -4,19 +4,20 @@ import Web3Utils from "web3-utils";
 import BN from "bn.js";
 import {useAccount} from "wagmi";
 import {FaCheckCircle, FaInfoCircle, FaTimesCircle} from 'react-icons/fa';
-
+import CountUp from "react-countup";
 
 //TODO need to pass as props
-const APIKEY = "ckey_744b3bfabf6a4e84a7a182ab71c";
 const baseURL = "https://api.covalenthq.com/v1";
 const act_contract_address = "0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e";
+const tusd_contract_address = "0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e";
+const treasury_contract_address = "0xD7E6E12E4e631CFb191dee3b8754C231E5019185";
 const chain_id = 80001;
 
 const Chart = dynamic(() => import('react-apexcharts'), {
     ssr: false,
 });
 
-function ActHoldings() {
+export default function ActHoldings() {
     const {address} = useAccount()
     console.log(address)
 
@@ -71,12 +72,35 @@ function ActHoldings() {
     const [projectedWeeklyAverage, setProjectedWeeklyAverage] = useState(0);
     const [chartData, setChartData] = useState(initialChartData);
     const [updated, setUpdated] = useState(false);
+    const [treasuryData, setTreasuryData] = useState(0)
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const url = new URL(
+                `${baseURL}/${chain_id}/address/${treasury_contract_address}/balances_v2/?key=${process.env.NEXT_PUBLIC_COVALENT_API_KEY}`
+            );
+            const response = await fetch(url);
+            const result = await response.json();
+            console.log(result)
+            result.data.items.forEach(item => {
+                console.log(item.contract_address)
+                if(item.contract_address.toLowerCase() === tusd_contract_address.toLowerCase()) {
+                    const treasuryBalance = Web3Utils.fromWei(new BN(item.balance));
+                    console.log("treasuryBalance: " + treasuryBalance)
+                    setTreasuryData(+treasuryBalance);
+                }
+            });
+        }
+
+        fetchData().catch(e => {
+        })
+    }, [address])
 
     useEffect(() => {
         if (address) {
             const fetchData = async () => {
                 const url = new URL(
-                    `${baseURL}/${chain_id}/address/${address}/portfolio_v2/?key=${APIKEY}`
+                    `${baseURL}/${chain_id}/address/${address}/portfolio_v2/?key=${process.env.NEXT_PUBLIC_COVALENT_API_KEY}`
                 );
                 const response = await fetch(url);
                 const result = await response.json();
@@ -175,10 +199,8 @@ function ActHoldings() {
 
     return (
         <>
-            <div className="grid grid-cols-7">
-                <div className={"col-span-1"}></div>
-                <div
-                    className=" ml-30 max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
+            <div className="flex flex-col 3xl:flex-row">
+                <div className="3xl:basis-1/4 3xl:ml-20 3xl:mr-20 mb-5 max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
                     <div className="mt-8 md:items-center justify-center">
                         <div className="px-6 py-6 md:px-8 md:py-0">
                             <h2 className="text-2xl font-bold text-gray-200 dark:text-white text-center">How to get
@@ -221,8 +243,7 @@ function ActHoldings() {
                         </div>
                     </div>
                 </div>
-                <div
-                    className="col-span-3 max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
+                <div className="3xl:basis-2/4 mb-5 mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
                     <div className="mt-8 md:items-center justify-center">
                         <div className="px-6 py-6 md:px-8 md:py-0">
                             <h2 className="text-2xl font-bold text-gray-200 dark:text-white text-center">Your ACT
@@ -231,8 +252,7 @@ function ActHoldings() {
                                 more ACT you hold the bigger share of the rewards you'll receive.</p>
                         </div>
                     </div>
-                    <div
-                        className="flex mt-10 ml-5 items-center text-center justify-center pb-6 md:py-0 text-black">
+                    <div className="flex mt-10 ml-5 items-center text-center justify-center pb-6 md:py-0 text-black">
                         <div className="mb-10 text-black">
                             <Chart className={"text-black"}
                                    options={chartData.options}
@@ -244,17 +264,44 @@ function ActHoldings() {
                     </div>
                     <div className="mt-2 md:items-center justify-center">
                         <div className="px-6 py-6 md:px-8 md:py-0">
-                            <p className="mt-2 mb-3 text-gray-300">Your average ACT held up to now: {weeklyAverage}.</p>
+                            <p className="mt-2 mb-3 text-gray-300">Your average ACT held up to now:
+                                <CountUp end={weeklyAverage}
+                                         duration={2}
+                                         separator=" "
+                                         decimals={0}
+                                         decimal="."
+                                         prefix=" ACT "/>
+                                </p>
                             <p className="mt-2 mb-3 text-gray-300">Your projected average ACT when position
-                                held: {projectedWeeklyAverage}.</p>
+                                held:
+                                <CountUp end={projectedWeeklyAverage}
+                                         duration={2}
+                                         separator=","
+                                         decimals={0}
+                                         decimal="."
+                                         prefix=" ACT "/>
+                                </p>
                         </div>
                     </div>
                 </div>
-                <div className={''}>
+                <div className="3xl:basis-1/4 mb-5 3xl:ml-20 3xl:mr-20  max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
+                    <div className="mt-8 md:items-center justify-center">
+                        <div className="px-6 py-6 md:px-8 md:py-0">
+                            <h2 className="text-2xl font-bold text-gray-200 dark:text-white text-center">Treasury current balance</h2>
+                            <p className="mt-2 mb-5 text-gray-500 text-sm">Our treasury holding get redistributed to ACT tokens weekly. The below is it's current balance and allocation</p>
+                            <div className={'text-white text-center text-8xl font-extrabold' }>
+
+                                <CountUp end={treasuryData}
+                                         duration={3}
+                                         separator=" "
+                                         decimals={0}
+                                         decimal="."
+                                         prefix="₮"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
     );
 }
-
-export default ActHoldings;
