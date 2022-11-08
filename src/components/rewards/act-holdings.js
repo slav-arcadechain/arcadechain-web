@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Web3Utils from "web3-utils";
 import BN from "bn.js";
 import {useAccount} from "wagmi";
-import {FaBeer, FaCheckCircle, FaInfoCircle, FaTimesCircle} from 'react-icons/fa';
+import {FaCheckCircle, FaInfoCircle, FaTimesCircle} from 'react-icons/fa';
 
 
 //TODO need to pass as props
@@ -66,6 +66,7 @@ function ActHoldings() {
 
     };
 
+    const [gamesPlayedCount, setGamesPlayedCount] = useState(0);
     const [weeklyAverage, setWeeklyAverage] = useState(0);
     const [projectedWeeklyAverage, setProjectedWeeklyAverage] = useState(0);
     const [chartData, setChartData] = useState(initialChartData);
@@ -123,31 +124,53 @@ function ActHoldings() {
 
     }, [address])
 
-
     useEffect(() => {
         if (updated) {
             setChartData(chartData);
         }
     }, [updated])
 
+    useEffect(() => {
+        if (address) {
+            fetch('https://us-central1-archadechain-faucet.cloudfunctions.net/getSlotGameCount',
+                {
+                    method: 'POST',
+                    body: JSON.stringify({"address": address}),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }
+            ).then(async (response) => {
+                const count = await response.json();
+                setGamesPlayedCount(+count);
+                console.debug("count: " + count);
+            }).catch(e => {
+                console.error("error: " + e)
+            });
+        }
+    }, [address])
+
     function removeTime(date = new Date()) {
         return new Date(date.toDateString());
     }
-    const pendingStyle = { color: "purple", fontSize: "1.5em", 'padding-right': "5px", 'padding-bottom': "5px" }
-    const completedStyle= { color: "green", fontSize: "2.0em" , 'padding-right': "5px",'padding-bottom': "5px" }
-    const infoStyle= { color: "#1072d9", fontSize: "2.0em" , 'padding-right': "5px",'padding-bottom': "5px" }
+
+    const pendingStyle = {color: "purple", fontSize: "2.0em", paddingRight: "5px", paddingBottom: "5px"}
+    const completedStyle = {color: "green", fontSize: "2.0em", paddingRight: "5px", paddingBottom: "5px"}
+    const infoStyle = {color: "#1072d9", fontSize: "2.0em", paddingRight: "5px", paddingBottom: "5px"}
     let actStepIcon;
-    if(projectedWeeklyAverage > 0) {
-        actStepIcon =  <FaCheckCircle style ={completedStyle} />
+    if (projectedWeeklyAverage > 0) {
+        actStepIcon = <FaCheckCircle style={completedStyle}/>
     } else {
-        actStepIcon = <FaTimesCircle style ={pendingStyle} />
+        actStepIcon = <FaTimesCircle style={pendingStyle}/>
     }
 
     let gameStepIcon;
-    if(projectedWeeklyAverage > 0) {
-        gameStepIcon =  <FaCheckCircle style ={completedStyle} />
+    let countParagraph;
+    if (gamesPlayedCount > 0) {
+        gameStepIcon = <FaCheckCircle style={completedStyle}/>
+        countParagraph = <p className={'text-md text-gray-50'}>Currently you have {gamesPlayedCount} entries</p>
     } else {
-        gameStepIcon = <FaTimesCircle style ={pendingStyle} />
+        gameStepIcon = <FaTimesCircle style={pendingStyle}/>
     }
 
     return (
@@ -160,7 +183,8 @@ function ActHoldings() {
                         <div className="px-6 py-6 md:px-8 md:py-0">
                             <h2 className="text-2xl font-bold text-gray-200 dark:text-white text-center">How to get
                                 rewarded?</h2>
-                            <p className="mt-2 mb-5 text-gray-500 text-sm">Arcade Chain Platform is an unique platform where profits from the games are shared with all the players.</p>
+                            <p className="mt-2 mb-5 text-gray-500 text-sm">Arcade Chain Platform is an unique platform
+                                where profits from the games are shared with all the players.</p>
                             <div>
                                 <ul>
                                     <li className={'flex text-white'}>
@@ -173,20 +197,23 @@ function ActHoldings() {
                                         {gameStepIcon} Play our games
                                     </li>
                                     <li className={'text-gray-500 text-sm mb-5'}>
-                                        To be eligible for current week's rewards you need to play a single round of any of our games that week.
+                                        To be eligible for current week's rewards you need to play a single round of any
+                                        of our games that week.
                                     </li>
                                     <li className={'flex text-white'}>
-                                       <FaInfoCircle style={infoStyle}/> Win Golden Ticket
+                                        <FaInfoCircle style={infoStyle}/> Win Golden Ticket
                                     </li>
                                     <li className={'text-gray-500 text-sm mb-5'}>
-                                        For every round played in any of our games you get one entry to win the Golden Ticket - 10% of our treasury in TUSD.
+                                        For every round played in any of our games you get one entry to win the Golden
+                                        Ticket - 10% of our treasury in TUSD.
+                                        {countParagraph}
                                     </li>
                                     <li className={'flex text-white '}>
                                         <FaInfoCircle style={infoStyle}/> Rewards in TUSD
                                     </li>
                                     <li className={'text-gray-500 text-sm mb-5'}>
-                                            For your convenience all our rewards are paid in TUSD directly to your wallet.
-                                </li>
+                                        For your convenience all our rewards are paid in TUSD directly to your wallet.
+                                    </li>
                                 </ul>
 
 
@@ -224,8 +251,6 @@ function ActHoldings() {
                     </div>
                 </div>
                 <div className={''}>
-                    dfas
-
                 </div>
             </div>
         </>
