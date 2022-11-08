@@ -8,7 +8,7 @@ import CountUp from "react-countup";
 
 //TODO need to pass as props
 const baseURL = "https://api.covalenthq.com/v1";
-const act_contract_address = "0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e";
+const act_contract_address = "0x9AE51260C3824ADc9DD9F02Bc4D6B9e5Eddeb406";
 const tusd_contract_address = "0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e";
 const treasury_contract_address = "0xD7E6E12E4e631CFb191dee3b8754C231E5019185";
 const chain_id = 80001;
