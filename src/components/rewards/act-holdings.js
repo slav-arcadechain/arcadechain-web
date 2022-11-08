@@ -219,7 +219,7 @@ export default function ActHoldings() {
                                         {gameStepIcon} Play our games
                                     </li>
                                     <li className={'text-gray-500 text-sm mb-5'}>
-                                        To be eligible for current week's rewards you need to play a single round of any
+                                        To be eligible for current week&rsquo;s rewards you need to play a single round of any
                                         of our games that week.
                                     </li>
                                     <li className={'flex text-white'}>
@@ -249,7 +249,7 @@ export default function ActHoldings() {
                             <h2 className="text-2xl font-bold text-gray-200 dark:text-white text-center">Your ACT
                                 holdings</h2>
                             <p className="mt-2 mb-3 text-gray-500">Your average ACT holdings per day for the week. The
-                                more ACT you hold the bigger share of the rewards you'll receive.</p>
+                                more ACT you hold the bigger share of the rewards you&rsquo;ll receive.</p>
                         </div>
                     </div>
                     <div className="flex mt-10 ml-5 items-center text-center justify-center pb-6 md:py-0 text-black">
@@ -288,7 +288,7 @@ export default function ActHoldings() {
                     <div className="mt-8 md:items-center justify-center">
                         <div className="px-6 py-6 md:px-8 md:py-0">
                             <h2 className="text-2xl font-bold text-gray-200 dark:text-white text-center">Treasury current balance</h2>
-                            <p className="mt-2 mb-5 text-gray-500 text-sm">Our treasury holding get redistributed to ACT tokens weekly. The below is it's current balance and allocation</p>
+                            <p className="mt-2 mb-5 text-gray-500 text-sm">Our treasury holding get redistributed to ACT tokens weekly. The below is it&rsquo;s current balance and allocation</p>
                             <div className={'text-white text-center text-8xl font-extrabold' }>
 
                                 <CountUp end={treasuryData}
