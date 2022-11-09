@@ -113,10 +113,10 @@ export default function ActHoldings() {
                     if (item.contract_address.toLowerCase() === act_contract_address.toLowerCase()) {
                         let weeklyHoldings = item.holdings.map((holding) => {
                            if(!lastRawCloseBalance) {
-                               lastRawCloseBalance = Web3Utils.fromWei(new BN(holding.close.balance));
+                               lastRawCloseBalance = (Math.floor(Web3Utils.fromWei(new BN(holding.close.balance))));
                            }
                             if (removeTime(new Date(holding.timestamp)) >= removeTime(prevMonday)) {
-                                return Web3Utils.fromWei(new BN(holding.low.balance).add(new BN(holding.high.balance)).divRound(new BN('2'))).toString().split('.')[0];
+                                return Math.floor(Web3Utils.fromWei(new BN(holding.low.balance).add(new BN(holding.high.balance)).divRound(new BN('2'))));
                             }
                         })
 
