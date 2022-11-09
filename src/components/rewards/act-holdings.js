@@ -19,7 +19,6 @@ const Chart = dynamic(() => import('react-apexcharts'), {
 
 export default function ActHoldings() {
     const {address} = useAccount()
-    console.log(address)
 
     let initialChartData = {
         options: {
@@ -81,12 +80,9 @@ export default function ActHoldings() {
             );
             const response = await fetch(url);
             const result = await response.json();
-            console.log(result)
             result.data.items.forEach(item => {
-                console.log(item.contract_address)
                 if(item.contract_address.toLowerCase() === tusd_contract_address.toLowerCase()) {
                     const treasuryBalance = Web3Utils.fromWei(new BN(item.balance));
-                    console.log("treasuryBalance: " + treasuryBalance)
                     setTreasuryData(+treasuryBalance);
                 }
             });
@@ -120,7 +116,8 @@ export default function ActHoldings() {
                             }
                         })
 
-                        weeklyHoldings = weeklyHoldings.filter(n=> n).reverse();
+                        weeklyHoldings = weeklyHoldings.filter( n=> n >= 0)
+                        weeklyHoldings = weeklyHoldings.reverse()
                         weeklyHoldings.length = 7;
                         projection = Array.from(weeklyHoldings, (v) => v ?? lastRawCloseBalance)
                         res = Array.from(weeklyHoldings, (v) => v ?? '0')
