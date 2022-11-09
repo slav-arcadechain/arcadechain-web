@@ -106,36 +106,33 @@ export default function ActHoldings() {
                 const result = await response.json();
                 const prevMonday = new Date();
                 let res;
-                console.log("portfolio: " + JSON.stringify(result));
                 let projection;
+                let lastRawHighBalance;
                 prevMonday.setDate(prevMonday.getDate() - (prevMonday.getDay() + 6) % 7);
                 result.data.items.forEach(item => {
                     if (item.contract_address.toLowerCase() === act_contract_address.toLowerCase()) {
                         let weeklyHoldings = item.holdings.map((holding) => {
+                           if(!lastRawHighBalance) {
+                               lastRawHighBalance = Web3Utils.fromWei(new BN(holding.high.balance));
+                           }
                             if (removeTime(new Date(holding.timestamp)) >= removeTime(prevMonday)) {
-                                console.log("---> " + Web3Utils.fromWei(new BN(holding.low.balance).add(new BN(holding.high.balance)).divRound(new BN('2'))).toString().split('.')[0])
                                 return Web3Utils.fromWei(new BN(holding.low.balance).add(new BN(holding.high.balance)).divRound(new BN('2'))).toString().split('.')[0];
                             }
                         })
 
                         weeklyHoldings = weeklyHoldings.filter(n=> n).reverse();
-                        let lastEntry = weeklyHoldings.filter(n => n).at(-1);
-                        console.log(lastEntry)
                         weeklyHoldings.length = 7;
-                        projection = Array.from(weeklyHoldings, (v) => v ?? lastEntry)
-                        console.log(projection)
+                        projection = Array.from(weeklyHoldings, (v) => v ?? lastRawHighBalance)
                         res = Array.from(weeklyHoldings, (v) => v ?? '0')
                     }
                 });
 
                 if (res) {
-                    console.log(res)
                     const newSeries = [];
                     newSeries.push({name: "ACT holdings", data: res});
                     newSeries.push({name: "ACT projected holdings", data: projection});
                     initialChartData.series = newSeries;
                     chartData.series = newSeries;
-                    console.log(res.reduce((a, b) => parseInt(a) + parseInt(b)))
                     setWeeklyAverage(Math.floor(res.reduce((a, b) => parseInt(a) + parseInt(b)) / res.length));
                     setProjectedWeeklyAverage(projection.reduce((a, b) => parseInt(a) + parseInt(b), 0) / projection.length);
                     setChartData(chartData);
