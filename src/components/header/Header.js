@@ -21,10 +21,10 @@ const Header = () => {
                         <nav id="primary-nav"
                              className={`fixed inset-0 flex flex-col items-center text-xl duration-200 ease-in-out ${showSidebar ? 'translate-x-0' : 'translate-x-full'} z-90 gap-7 bg-slate-900/80 pt-28 backdrop-blur md:left-1/2 xl:static xl:translate-x-0 xl:flex-row xl:items-center xl:gap-6 xl:bg-transparent xl:px-0 xl:pt-0 xl:text-base`}>
                             <Link href='/slot' className='font-bold text-white text-lg'>Play Slot (Beta)</Link>
+                            <Link href="/rewards" className="text-lg font-bold text-white">Rewards</Link>
                             <Link href='/faucet' className='font-bold text-white text-lg'>TUSD faucet</Link>
                             <Link href='/get-act-token' className='font-bold text-white text-lg'>Get ACT</Link>
                             <Link href='/arcade_chain_whitepaper.pdf' className='font-bold text-white text-lg'>White Paper</Link>
-                            <Link href="/rewards" className="text-lg font-bold text-white">Rewards</Link>
                             <ConnectButton/>
                         </nav>
                     </div>
@@ -47,7 +47,6 @@ const Header = () => {
                                 <path d="M4 27h28v-3H4v3zm0-8h28v-3H4v3zM4 8v3h28V8H4z"/>
                             </svg>
                         }
-
                     </button>
                 </div>
             </header>

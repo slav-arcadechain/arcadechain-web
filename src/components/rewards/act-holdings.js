@@ -3,14 +3,15 @@ import dynamic from "next/dynamic";
 import Web3Utils from "web3-utils";
 import BN from "bn.js";
 import {useAccount} from "wagmi";
-import {FaCheckCircle, FaInfoCircle, FaTimesCircle} from 'react-icons/fa';
+import {FaCheckCircle, FaInfoCircle, FaTicketAlt, FaTimesCircle} from 'react-icons/fa';
 import CountUp from "react-countup";
+import Image from "next/image";
 
 //TODO need to pass as props
-const baseURL = "https://api.covalenthq.com/v1";
 const act_contract_address = "0x9AE51260C3824ADc9DD9F02Bc4D6B9e5Eddeb406";
 const tusd_contract_address = "0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e";
-const treasury_contract_address = "0xD7E6E12E4e631CFb191dee3b8754C231E5019185";
+const treasury_contract_address = "0x5AAbB68890a559d0aF981F5CCBBc089e1eAE9711";
+const baseURL = "https://api.covalenthq.com/v1";
 const chain_id = 80001;
 
 const Chart = dynamic(() => import('react-apexcharts'), {
@@ -174,32 +175,31 @@ export default function ActHoldings() {
         return new Date(date.toDateString());
     }
 
-    const pendingStyle = {color: "purple", fontSize: "2.0em", paddingRight: "5px", paddingBottom: "5px"}
-    const completedStyle = {color: "green", fontSize: "2.0em", paddingRight: "5px", paddingBottom: "5px"}
-    const infoStyle = {color: "#1072d9", fontSize: "2.0em", paddingRight: "5px", paddingBottom: "5px"}
+    const infoStyle = {color: "#1072d9", fontSize: "2.0em", paddingRight: "15px", paddingBottom: "5px"}
     let actStepIcon;
     if (projectedWeeklyAverage > 0) {
-        actStepIcon = <FaCheckCircle style={completedStyle}/>
+        actStepIcon = <Image src={"/images/check_mark.png"} alt={"cross mark"} height={32} width={32} className={"mr-4"} />
     } else {
-        actStepIcon = <FaTimesCircle style={pendingStyle}/>
+        actStepIcon = <Image src={"/images/cross_mark.png"} alt={"cross mark"} height={32} width={32} className={"mr-4"}  />
     }
 
     let gameStepIcon;
     let countParagraph;
     if (gamesPlayedCount > 0) {
-        gameStepIcon = <FaCheckCircle style={completedStyle}/>
-        countParagraph = <p className={'text-md text-gray-50'}>Currently you have {gamesPlayedCount} entries</p>
+        gameStepIcon = <Image src={"/images/check_mark.png"} alt={"cross mark"} height={32} width={32} className={"mr-4"} />
+        countParagraph = <p className={'text-md text-pink-500 mt-10 mb-20 text-center text-2xl font-bold'}>Currently you have {gamesPlayedCount} entry(s)</p>
     } else {
-        gameStepIcon = <FaTimesCircle style={pendingStyle}/>
+        gameStepIcon = <Image src={"/images/cross_mark.png"} alt={"cross mark"} height={32} width={32} className={"mr-4"} />
     }
 
     return (
         <>
             <div className="flex flex-col 3xl:flex-row">
-                <div className="3xl:basis-1/4 3xl:ml-20 3xl:mr-20 mb-5 max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
+                <div
+                    className="3xl:basis-1/4 3xl:ml-20 3xl:mr-20 mb-5 max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
                     <div className="mt-8 md:items-center justify-center">
                         <div className="px-6 py-6 md:px-8 md:py-0">
-                            <h2 className="text-2xl font-bold text-gray-200 dark:text-white text-center">How to get
+                            <h2 className="text-4xl font-bold text-white dark:text-white text-center">How to get
                                 rewarded?</h2>
                             <p className="mt-2 mb-5 text-gray-500 text-sm">Arcade Chain Platform is an unique platform
                                 where profits from the games are shared with all the players.</p>
@@ -215,11 +215,12 @@ export default function ActHoldings() {
                                         {gameStepIcon} Play our games
                                     </li>
                                     <li className={'text-gray-500 text-sm mb-5'}>
-                                        To be eligible for current week&rsquo;s rewards you need to play a single round of any
+                                        To be eligible for current week&rsquo;s rewards you need to play a single round
+                                        of any
                                         of our games that week.
                                     </li>
                                     <li className={'flex text-white'}>
-                                        <FaInfoCircle style={infoStyle}/> Win Golden Ticket
+                                        <FaTicketAlt style={infoStyle}/> Win Golden Ticket
                                     </li>
                                     <li className={'text-gray-500 text-sm mb-5'}>
                                         For every round played in any of our games you get one entry to win the Golden
@@ -239,13 +240,12 @@ export default function ActHoldings() {
                         </div>
                     </div>
                 </div>
-                <div className="3xl:basis-2/4 mb-5 mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
+                <div
+                    className="3xl:basis-2/4 mb-5 mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
                     <div className="mt-8 md:items-center justify-center">
                         <div className="px-6 py-6 md:px-8 md:py-0">
-                            <h2 className="text-2xl font-bold text-gray-200 dark:text-white text-center">Your ACT
-                                holdings</h2>
-                            <p className="mt-2 mb-3 text-gray-500">Your average ACT holdings per day for the week. The
-                                more ACT you hold the bigger share of the rewards you&rsquo;ll receive.</p>
+                            <h2 className="text-4xl font-bold text-white dark:text-white text-center">Your ACT holdings</h2>
+                            <p className="mt-2 mb-3 text-gray-500">Your average ACT holdings per day for the week. The more ACT you hold the bigger share of the rewards you&rsquo;ll receive.</p>
                         </div>
                     </div>
                     <div className="flex mt-10 ml-5 items-center text-center justify-center pb-6 md:py-0 text-black">
@@ -260,32 +260,34 @@ export default function ActHoldings() {
                     </div>
                     <div className="mt-2 md:items-center justify-center">
                         <div className="px-6 py-6 md:px-8 md:py-0">
-                            <p className="mt-2 mb-3 text-gray-300">Your average ACT held up to now:
+                            <p className="mt-2 mb-3 text-pink-500 text-3xl font-bold text-center">Your average ACT held up to now:
                                 <CountUp end={weeklyAverage}
                                          duration={2}
                                          separator=" "
                                          decimals={0}
                                          decimal="."
-                                         prefix=" ACT "/>
-                                </p>
-                            <p className="mt-2 mb-3 text-gray-300">Your projected average ACT when position
+                                         prefix=" "/>
+                            </p>
+                            <p className="mt-2 mb-3 text-pink-500 text-3xl font-bold text-center">Your projected average ACT when position
                                 held:
                                 <CountUp end={projectedWeeklyAverage}
                                          duration={2}
                                          separator=","
                                          decimals={0}
                                          decimal="."
-                                         prefix=" ACT "/>
-                                </p>
+                                         prefix=" "/>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div className="3xl:basis-1/4 mb-5 3xl:ml-20 3xl:mr-20  max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
+                <div
+                    className="3xl:basis-1/4 mb-5 3xl:ml-20 3xl:mr-20  max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
                     <div className="mt-8 md:items-center justify-center">
                         <div className="px-6 py-6 md:px-8 md:py-0">
-                            <h2 className="text-2xl font-bold text-gray-200 dark:text-white text-center">Treasury current balance</h2>
-                            <p className="mt-2 mb-5 text-gray-500 text-sm">Our treasury holding get redistributed to ACT tokens weekly. The below is it&rsquo;s current balance and allocation</p>
-                            <div className={'text-white text-center text-8xl font-extrabold' }>
+                            <h2 className="text-4xl font-bold text-white dark:text-white text-center">Current Treasury Balance</h2>
+                            <p className="mt-2 mb-5 text-gray-500 text-sm">Our treasury holding get redistributed to ACT
+                                tokens weekly. The below is it&rsquo;s current balance and allocation</p>
+                            <div className={'text-pink-500 text-center text-8xl font-extrabold'}>
 
                                 <CountUp end={treasuryData}
                                          duration={3}
@@ -293,6 +295,10 @@ export default function ActHoldings() {
                                          decimals={0}
                                          decimal="."
                                          prefix="₮"/>
+                                <div className={'flex items-center justify-center'}>
+                                    <Image src={'/images/money_pot.png'} alt={"treasure"} width={300} height={300} className={'flex mt-6 text-center'}/>
+                                </div>
+
                             </div>
                         </div>
                     </div>

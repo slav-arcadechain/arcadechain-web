@@ -34,10 +34,12 @@ class Footer extends Component {
                             className="row-start-3 space-y-4 text-center col-span-full sm:col-span-1 sm:col-start-3 sm:row-start-2 sm:text-left md:space-y-6">
                             <h3 className="font-bold text-white uppercase">Contact</h3>
 
-                            <a className="block text-gray-400"
-                                href="mailto:support@arcadechain.io" title={"email"}>support@arcadechain.io</a>
-
                             <div className="flex items-center mx-auto w-fit gap-x-6">
+                                <a href="mailto:support@arcadechain.io" title={"email"}>
+                                    <div className="h-8 w-8 xl:h-20 xl:w-12 relative pt-2">
+                                        <Image height={80} width={80} src={"/images/email.svg"} alt="mail" />
+                                    </div>
+                                </a>
                                 <a href="https://twitter.com/archadechain" title={"twitter"}>
                                     <div className="h-8 w-8 xl:h-20 xl:w-12 relative">
                                         <Image height={80} width={80} src={"/images/twitter.svg"} alt="twitter" />
@@ -46,6 +48,11 @@ class Footer extends Component {
                                 <a href="https://t.me/arcadechain" title={"telegram"}>
                                     <div className="h-8 w-8 xl:h-20 xl:w-12 relative">
                                         <Image height={80} width={80}  src={"/images/telegram.svg"} alt="telegram" />
+                                    </div>
+                                </a>
+                                <a href="https://discord.gg/9p93pdzC8T" title={"discord"}>
+                                    <div className="h-8 w-8 xl:h-20 xl:w-12 relative">
+                                        <Image height={80} width={80}  src={"/images/discord.svg"} alt="discord" />
                                     </div>
                                 </a>
                             </div>
