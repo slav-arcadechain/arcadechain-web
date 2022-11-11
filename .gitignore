@@ -29,3 +29,8 @@ npm-debug.log*
 
 # nextjs
 .next
+
+# misc
+yarn-error.log
+# Sentry
+.sentryclirc

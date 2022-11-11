@@ -6,6 +6,9 @@
     body {
         background-color: #000131;
     }
+    .apexcharts-text {
+        color: #000131;
+    }
 }
 
 @layer utilities {
@@ -14,3 +17,4 @@
         width: 100vw;
     }
 }
+

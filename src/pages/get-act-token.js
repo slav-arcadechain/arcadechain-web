@@ -3,18 +3,17 @@ import Head from "next/head";
 import Background from "../components/background/Background";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
-import Image from "next/image";
 import IntroText from "../components/elements/IntroText";
 import Switchere from "../components/switchere/Switchere";
 import path from "path";
 import fs from "fs/promises";
 import {SwapWidget} from "@uniswap/widgets";
 
-function GetActToken(props) {
 
+function GetActToken(props) {
     const UNISWAP_TOKEN_LIST = props.uniswapData;
     const MATIC = '0x0000000000000000000000000000000000001010'
-    const TUSD  = '0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e'
+    const TUSD = '0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e'
     const theme = {
         borderRadius: 0.5,
         fontFamily: '"Helvetica"',
@@ -24,7 +23,6 @@ function GetActToken(props) {
         primary: "#ffffff",
         interactive: "#4d4f78",
         accent: '#2da245',
-
     }
 
     return (
@@ -59,37 +57,38 @@ function GetActToken(props) {
                 <Background/>
                 <Header/>
                 <main className="mx-auto mt-16 max-w-container px-4 sm:mt-24 sm:px-10 3xl:px-0">
-                  <div className={"grid place-items-center"}>
-                    <IntroText leadText={['1. ', 'Exchange your money for crypto.']}
-                               followText={'For your convenience you are now able to convert your fiat currency to crypto tokens of your choice using wide range of payment methods including payment card and bank transfers.'}/>
-                    <Switchere/>
-                    <IntroText style={'mt-52'} leadText={['2. ', 'Swap your crypto for ACT token.']}
-                               followText={'It\'s easier then ever to swap crypto you own for our ACT token, directly from our platform.'}/>
-
-                    <div className="Uniswap">
-                        <SwapWidget
-                            width={505}
-                            theme={theme}
-                            tokenList={UNISWAP_TOKEN_LIST}
-                            defaultInputTokenAddress={MATIC}
-                            defaultInputAmount={0.1}
-                            hideConnectionUI={true}
-                            defaultChainId={80001}
-                            defaultOutputTokenAddress={TUSD}
-                        />
+                    <div className="bg-pink-500 mb-20">
+                        <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
+                            <div className="flex flex-wrap items-center justify-center">
+                                    <p className="ml-3  font-bold text-2xl text-white text-center">
+                                        Please be aware that on-ramp and swap functionalities are currently in beta testing.
+                                    </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div className={"grid place-items-center"}>
+                        <IntroText leadText={['1. ', 'Exchange your money for crypto.']}
+                                   followText={'For your convenience you are now able to convert your fiat currency to crypto tokens of your choice using wide range of payment methods including payment card and bank transfers.'}/>
+                        <Switchere/>
+                        <IntroText style={'mt-52'} leadText={['2. ', 'Swap your crypto for ACT token.']}
+                                   followText={'It\'s easier then ever to swap crypto you own for our ACT token, directly from our platform.'}/>
+
+                        <div className="Uniswap">
+
+                                <SwapWidget
+                                    width={505}
+                                    theme={theme}
+                                    tokenList={UNISWAP_TOKEN_LIST}
+                                    defaultInputTokenAddress={MATIC}
+                                    defaultInputAmount={0.1}
+                                    hideConnectionUI={true}
+                                    defaultChainId={80001}
+                                    defaultOutputTokenAddress={TUSD}
+                                />
+                        </div>
+                    </div>
                 </main>
                 <Footer/>
-                <div className='absolute inset-x-0 bottom-0 -z-10 w-full'>
-                    <div className='relative h-screen lg:h-[120rem] w-full'>
-                        <Image
-                            width={3000} height={200}
-                            src={'/images/stellar-bg-2.webp'}
-                            alt="stellar bg"
-                        />
-                    </div>
-                </div>
             </div>
         </>
     );
