@@ -194,6 +194,15 @@ export default function ActHoldings() {
 
     return (
         <>
+            <div className="bg-pink-500 mb-20">
+                <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
+                    <div className="flex flex-wrap items-center justify-center">
+                            <p className="ml-3 truncate font-bold text-2xl text-white text-center">
+                                <span className=" md:inline">Please be aware that Rewards functionality is currently in beta testing.</span>
+                            </p>
+                    </div>
+                </div>
+            </div>
             <div className="flex flex-col 3xl:flex-row">
                 <div
                     className="3xl:basis-1/4 3xl:ml-20 3xl:mr-20 mb-5 max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800  border rounded-lg dark:border-gray-600 dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
@@ -288,6 +297,7 @@ export default function ActHoldings() {
                             <p className="mt-2 mb-5 text-gray-500 text-sm">Our treasury holding get redistributed to ACT
                                 tokens weekly. The below is it&rsquo;s current balance and allocation</p>
                             <div className={'text-pink-500 text-center text-8xl font-extrabold'}>
+                                        <span className="block text-transparent bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text mix-blend-screen">
 
                                 <CountUp end={treasuryData}
                                          duration={3}
@@ -295,6 +305,7 @@ export default function ActHoldings() {
                                          decimals={0}
                                          decimal="."
                                          prefix="₮"/>
+                                        </span>
                                 <div className={'flex items-center justify-center'}>
                                     <Image src={'/images/money_pot.png'} alt={"treasure"} width={300} height={300} className={'flex mt-6 text-center'}/>
                                 </div>

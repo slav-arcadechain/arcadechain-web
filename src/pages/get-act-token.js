@@ -57,6 +57,15 @@ function GetActToken(props) {
                 <Background/>
                 <Header/>
                 <main className="mx-auto mt-16 max-w-container px-4 sm:mt-24 sm:px-10 3xl:px-0">
+                    <div className="bg-pink-500 mb-20">
+                        <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
+                            <div className="flex flex-wrap items-center justify-center">
+                                    <p className="ml-3  font-bold text-2xl text-white text-center">
+                                        Please be aware that on-ramp and swap functionalities are currently in beta testing.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
                     <div className={"grid place-items-center"}>
                         <IntroText leadText={['1. ', 'Exchange your money for crypto.']}
                                    followText={'For your convenience you are now able to convert your fiat currency to crypto tokens of your choice using wide range of payment methods including payment card and bank transfers.'}/>
